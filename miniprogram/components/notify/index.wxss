@@ -1,14 +1,1 @@
-@import '../common/index.wxss';
-
-.van-notify {
-  width: 100%;
-  left: 0;
-  z-index: 9998;
-  color: #fff;
-  position: fixed;
-  box-sizing: border-box;
-  padding: 30rpx;
-  font-size: 30rpx;
-  text-align: center;
-  background-color: #e64340;
-}
+@import '../common/index.wxss';.van-notify{position:fixed;top:0;width:100%;padding:6px 15px;font-size:14px;line-height:20px;text-align:center;word-break:break-all;box-sizing:border-box}.van-notify__safe-top{height:44px}

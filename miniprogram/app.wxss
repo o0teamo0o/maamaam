@@ -74,6 +74,10 @@ page {
   background-color: #be8567;
 }
 
+.bg-main3 {
+  background-color: #e2641f;
+}
+
 .bg-main-selected {
   background-color: #75b65c;
 }

@@ -1,1 +1,119 @@
 /**index.wxss**/
+
+.top-layout {
+  position: relative;
+  border-bottom: 1rpx solid #d7d7d7;
+}
+
+.top-layout .nav {
+  position: absolute;
+  color: white;
+}
+
+.top-layout .bg-top {
+  width: 100vw;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.top-layout .user-layout {
+  height: 200rpx;
+  left: 3%;
+  border-radius: 10rpx;
+  box-shadow: #ddd 0 1px 3px;
+  width: 94%;
+  bottom: 30rpx;
+  position: absolute;
+  background-color: white;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.top-layout .user-layout .shop {
+  position: absolute;
+  right: 0;
+  top: 25rpx;
+  width: 110rpx;
+  height: auto;
+  display: block;
+}
+
+.top-layout .user-layout .img-head {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  border: 8rpx solid #ffede2;
+}
+
+.top-layout .user-layout .data-layout {
+  width: 450rpx;
+  margin-left: 20rpx;
+  height: 150rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-layout .user-layout .data-layout .top-view {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.top-layout .user-layout .data-layout .top-view .nick {
+  font-weight: bold;
+  font-size: 32rpx;
+  width: 285rpx;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.top-layout .user-layout .data-layout .top-view .email {
+  width: 50rpx;
+  height: auto;
+  margin-left: 15rpx;
+  display: block;
+}
+
+.top-layout .user-layout .data-layout .middle-line {
+  position: relative;
+}
+
+.top-layout .user-layout .data-layout .middle-line::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px dashed #f37c3b;
+  color: #f37c3b;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.top-layout .user-layout .data-layout .bottom-view {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  align-content: center;
+}
+
+.top-layout .user-layout .data-layout .bottom-view .middle-line {
+  height: 40rpx;
+  border-left: 1rpx dashed #f37c3b;
+  margin: 0 15rpx;
+}
+
+.top-layout .user-layout .data-layout .bottom-view .right {
+  text-align: right;
+}
