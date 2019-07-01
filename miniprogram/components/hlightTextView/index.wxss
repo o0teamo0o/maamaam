@@ -1,0 +1,20 @@
+/* component/searchHilightTextView.wxss */
+
+.hight {
+  height: 40rpx;
+  font-family: PingFangSC;
+  font-size: 34rpx;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #4287ff;
+}
+
+.normal {
+  color: #333;
+}

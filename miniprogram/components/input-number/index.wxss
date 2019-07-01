@@ -1,0 +1,49 @@
+@import "../../style/money.wxss";
+
+.i-input-number {
+  color: #495060;
+  /* background-color: red; */
+}
+
+.i-input-number view {
+  display: inline-block;
+  line-height: 90rpx;
+  /* padding: 5rpx 0; */
+  text-align: center;
+  min-width: 90rpx;
+  box-sizing: border-box;
+  vertical-align: middle;
+  font-size: 60rpx;
+  background-color: #dfe0e1;
+  /* border: 1rpx solid #dddee1; */
+}
+
+.i-input-number-minus {
+  border-right: none;
+  border-radius: 5rpx;
+}
+
+.i-input-number-plus {
+  border-left: none;
+  border-radius: 5rpx;
+}
+
+.i-input-number-text {
+  /* border: 1rpx solid #dddee1; */
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  height: 90rpx;
+  width: 120rpx;
+  min-height: auto;
+  font-size: 60rpx;
+  line-height: 90rpx;
+  color: #1aa89b;
+  font-family: 'Corki';
+}
+
+.i-input-number-disabled {
+  border-color: #dddee1;
+  color: #bbbec4;
+  background: #f7f7f7;
+}

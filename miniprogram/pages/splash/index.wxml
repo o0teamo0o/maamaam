@@ -1,2 +1,20 @@
 <!--miniprogram/pages/splash/index.wxml-->
-<text>miniprogram/pages/splash/index.wxml</text>
+<view class='body'>
+  <view class="wrap flex flex-v">
+    <view class='main flex-1'>
+      <toast id="notify" />
+      <image class='splash-logo' mode="widthFix" src='../../images/bg_splash_photo_frame.jpg'
+      />
+      <!-- <image class='splash-border' mode="widthFix" src='../../images/splash_border.png' /> -->
+      <image class='splash-bg' mode="widthFix" src='../../images/gb_splash_top_bg.jpg' />
+    </view>
+    <!-- <image class='bottom-log' mode='widthFix' src='../../images/splash_bottom.png' /> -->
+    <view class='bottom-layout'>
+      <image class='btn-splash' src='../../images/splash_btn.png' mode='widthFix' />
+      <image class='logo-splash' src='../../images/splash_logo.png' mode='widthFix' />
+    </view>
+
+    <image class='splash_camera' src='../../images/icon_splash_camera.jpg' mode='widthFix'
+    />
+  </view>
+</view>

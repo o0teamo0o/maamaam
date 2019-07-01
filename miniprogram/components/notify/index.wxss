@@ -1,0 +1,14 @@
+@import '../common/index.wxss';
+
+.van-notify {
+  width: 100%;
+  left: 0;
+  z-index: 9998;
+  color: #fff;
+  position: fixed;
+  box-sizing: border-box;
+  padding: 30rpx;
+  font-size: 30rpx;
+  text-align: center;
+  background-color: #e64340;
+}
