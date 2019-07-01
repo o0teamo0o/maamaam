@@ -1,12 +1,31 @@
 {
   "pages": [
+    "pages/splash/index",
     "pages/index/index"
+  ],
+  "subpackages": [
+    {
+      "root": "activity",
+      "name": "活动",
+      "pages": [
+      ]
+    },
+    {
+      "root": "product",
+      "name": "产品",
+      "pages": []
+    },
+    {
+      "root": "userinfo",
+      "name": "用户",
+      "pages": []
+    }
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTitleText": "慢漫悠享",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"
