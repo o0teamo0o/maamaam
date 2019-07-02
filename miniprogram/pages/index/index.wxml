@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <!-- <view class='top-layout'>
+  <view class='top-layout'>
     <image class='bg-top' src='../../images/bg_home_top.jpg' mode='widthFix' />
     <view class='nav' style='height:{{navHeight}}px'>
       <view class='nav-title'>慢漫悠享</view>
@@ -48,7 +48,7 @@
       </view>
     </view>
   </view>
-  <view class='line' /> -->
+  <view class='line' />
 
   <view class='line margin-top-30' />
   <view class='integral-layout'>
@@ -73,8 +73,8 @@
     </view>
     <block wx:else>
       <block wx:for="{{integralData}}" wx:key="forkey">
-        <view class='item-layout'>
-          <image class='icon' src='../../images/icon_integral_questionnaire.png' mode='widthFix' />
+        <view class='item-layout' hover-class='title-hover'>
+          <image class='icon' src='../../images/{{item.url}}' mode='widthFix' />
           <view class='right-layout'>
             <view class='top-view'>
               <view wx:if="{{item.star == 5}}" class="title title5">{{item.title}}</view>
@@ -92,13 +92,12 @@
                 <text>奖励积分:999分</text>
                 <view class='middle-line' />
                 <text>人数：9999/9999</text>
-                <!-- <text>人数:不限</text> -->
               </view>
               <view class='time'>2019.07.25 截止</view>
             </view>
           </view>
         </view>
-        <view class='line margin-left-60' />
+        <view wx:if="{{index != integralData.length-1}}" class='line margin-left-60' />
       </block>
     </block>
   </view>

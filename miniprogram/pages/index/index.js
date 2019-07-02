@@ -13,12 +13,15 @@ Page({
     // integralData: null, //积分任务列表
     // integralData: [],
     integralData: [{
+      "url": "icon_integral_questionnaire.png",
       "title": "【系统】用户爱好兴趣问卷【系统】用户爱好兴趣问卷",
       "star": 3,
     }, {
+      "url": "icon_integral_package.png",
       "title": "免费领取限量保险大礼包",
       "star": 2,
     }, {
+      "url": "icon_integral_public.png",
       "title": "关注“慢漫陪着你”公众号",
       "star": 2,
     }],

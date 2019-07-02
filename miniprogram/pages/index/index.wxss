@@ -176,6 +176,10 @@
   text-overflow: ellipsis;
 }
 
+.integral-layout {
+  background-color: white;
+}
+
 .integral-layout > .title {
   display: flex;
   align-content: center;
@@ -243,8 +247,7 @@
   display: flex;
   align-content: center;
   align-items: center;
-  margin-left: 60rpx;
-  padding: 20rpx 30rpx 20rpx 0;
+  padding: 20rpx 30rpx 20rpx 60rpx;
 }
 
 .integral-layout > .item-layout .icon {
