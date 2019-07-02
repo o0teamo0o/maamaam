@@ -121,7 +121,7 @@ page {
 .line-v {
   width: 0.1rpx;
   height: 50rpx;
-  border-left: 0.1rpx dashed #c5c5c5;
+  border-left: 0.1rpx dashed #e4e4e4;
 }
 
 .line-half, .dashed-line-half {
@@ -135,8 +135,8 @@ page {
   top: 0;
   right: 0;
   height: 1px;
-  border-top: 1px solid #c5c5c5;
-  color: #c5c5c5;
+  border-top: 1px solid #e4e4e4;
+  color: #e4e4e4;
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
   -webkit-transform: scaleY(0.5);
@@ -150,8 +150,8 @@ page {
   top: 0;
   right: 0;
   height: 1px;
-  border-top: 1px dashed #c5c5c5;
-  color: #c5c5c5;
+  border-top: 1px dashed #e4e4e4;
+  color: #e4e4e4;
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
   -webkit-transform: scaleY(0.5);
@@ -165,8 +165,8 @@ page {
   top: 0;
   right: 0;
   height: 1px;
-  border-top: 1px solid #c5c5c5;
-  color: #c5c5c5;
+  border-top: 1px solid #e4e4e4;
+  color: #e4e4e4;
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
   -webkit-transform: scaleY(0.5);
@@ -181,8 +181,8 @@ page {
   top: 0;
   right: 0;
   height: 1px;
-  border-top: 1px dashed #c5c5c5;
-  color: #c5c5c5;
+  border-top: 1px dashed #e4e4e4;
+  color: #e4e4e4;
   -webkit-transform-origin: 0 0;
   margin: 0 30rpx;
   transform-origin: 0 0;
@@ -308,6 +308,10 @@ page {
   margin-top: 30rpx;
 }
 
+.margin-top-60 {
+  margin-top: 60rpx;
+}
+
 .margin-bottom-30 {
   margin-bottom: 30rpx;
 }
@@ -318,6 +322,14 @@ page {
 
 .margin-left-30 {
   margin-left: 30rpx;
+}
+
+.margin-left-60 {
+  margin-left: 60rpx;
+}
+
+.margin-left-70 {
+  margin-left: 70rpx;
 }
 
 .margin-left-40 {
@@ -347,6 +359,17 @@ page {
   height: 35rpx;
   margin-left: 15rpx;
   background-color: #67cf22;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
+  animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
+}
+
+.sk-three-bounce .sk-child-width {
+  width: 35rpx;
+  height: 35rpx;
+  margin-left: 15rpx;
+  background-color: white;
   border-radius: 100%;
   display: inline-block;
   -webkit-animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;

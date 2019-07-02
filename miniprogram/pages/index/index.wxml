@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <view class='top-layout'>
+  <!-- <view class='top-layout'>
     <image class='bg-top' src='../../images/bg_home_top.jpg' mode='widthFix' />
     <view class='nav' style='height:{{navHeight}}px'>
       <view class='nav-title'>慢漫悠享</view>
@@ -32,16 +32,35 @@
     <view class='content'>
       <image class='left-img' src='../../images/icon_list.png' mode='widthFix' />
       <view class='user-head'>
-      <block wx:for="{{listData}}">
-        <view class='item-layout'>
-          <image class='head' src='../../images/icon_default_header.png' mode='widthFix'/>
-          <view class='name'>用户昵称</view>
+        <view wx:if="{{!listData}}" class="sk-three-bounce">
+          <view class="sk-child-width sk-bounce1" />
+          <view class="sk-child-width sk-bounce2" />
+          <view class="sk-child-width sk-bounce3" />
         </view>
-      </block>
+        <block wx:else>
+          <block wx:for="{{listData}}" wx:key="{{forkey}}">
+            <view class='item-layout'>
+              <image class='head' src='../../images/icon_default_header.png' mode='widthFix' />
+              <view class='name'>用户昵称</view>
+            </view>
+          </block>
+        </block>
       </view>
     </view>
   </view>
-  <view class='line' />
+  <view class='line' /> -->
+
+  <view class='line margin-top-30' />
+  <view class='integral-layout'>
+    <view class='title' hover-class='title-hover'>
+      <view class='mark' />
+      <text>积分任务</text>
+      <image class='arrow' src='../../images/right_arrow.png' mode='widthFix' />
+    </view>
+    <view class='line margin-left-60' />
+  </view>
+
+  <view class='line margin-top-30' />
 
   <view>我在这里</view>
   <view>我在这里</view>

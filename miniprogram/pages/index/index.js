@@ -8,6 +8,7 @@ Page({
    */
   data: {
     navHeight: app.globalData.navHeight,
+    // listData: null,
     listData: [{}, {}, {}],
   },
 
