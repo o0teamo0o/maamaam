@@ -15,7 +15,7 @@
         <view class='middle-line' />
         <view class='bottom-view'>
           <text decode='true'>等&nbsp;级：</text>
-          <rate value="3" void-icon="star" void-color="#eee" color="#e86c2f" size="{{15}}" />
+          <rate value="3" readonly void-icon="star" void-color="#eee" color="#e86c2f" size="{{15}}" />
           <view class='middle-line' />
           <view class='right'>
             <text decode='true'>积&nbsp;分：</text>
@@ -58,7 +58,43 @@
       <image class='arrow' src='../../images/right_arrow.png' mode='widthFix' />
     </view>
     <view class='line margin-left-60' />
+    <view wx:if="{{!integralData}}" class='loading-integral-layout'>
+      <view class="sk-three-bounce">
+        <view class="sk-child sk-bounce1" />
+        <view class="sk-child sk-bounce2" />
+        <view class="sk-child sk-bounce3" />
+      </view>
+    </view>
+    <view wx:elif="{{integralData.length == 0}}" class='empty-integral-layout'>
+      <view class='empty'>
+        <image class='empty-icon' src='../../images/icon_empty_integral.png' mode='widthFix' />
+        <text class='empty-hint'>暂无积分任务</text>
+      </view>
+    </view>
+    <block wx:else>
+      <block wx:for="{{integralData}}" wx:key="forkey">
+        <view class='item-layout'>
+          <image class='icon' src='../../images/icon_integral_questionnaire.png' mode='widthFix' />
+          <view class='right-layout'>
+            <view class='top-view'>
+              <view wx:if="{{item.star == 5}}" class="title title5">{{item.title}}</view>
+              <view wx:elif="{{item.star == 4}}" class="title title4">{{item.title}}</view>
+              <view wx:elif="{{item.star == 3}}" class="title title3">{{item.title}}</view>
+              <view wx:elif="{{item.star == 2}}" class="title title2">{{item.title}}</view>
+              <view wx:elif="{{item.star == 1}}" class="title title1">{{item.title}}</view>
+              <view wx:else class="title title0">{{item.title}}</view>
+              <view class='star-view'>
+                <rate value="{{item.star}}" readonly void-icon="star" count="{{item.star}}" void-color="#eee" color="#e86c2f" size="{{15}}" />
+              </view>
+            </view>
+            <view class='bottom-view'></view>
+          </view>
+        </view>
+        <view class='line margin-left-60' />
+      </block>
+    </block>
   </view>
+  <view class='line' />
 
   <view class='line margin-top-30' />
 

@@ -5,19 +5,19 @@
   border-bottom: 1rpx solid #e4e4e4;
 }
 
-.top-layout .nav {
+.top-layout > .nav {
   position: absolute;
   color: white;
 }
 
-.top-layout .bg-top {
+.top-layout > .bg-top {
   width: 100vw;
   height: auto;
   display: block;
   overflow: visible;
 }
 
-.top-layout .user-layout {
+.top-layout > .user-layout {
   height: 200rpx;
   left: 3%;
   border-radius: 10rpx;
@@ -33,7 +33,7 @@
   box-sizing: border-box;
 }
 
-.top-layout .user-layout .shop {
+.top-layout > .user-layout > .shop {
   position: absolute;
   right: 0;
   top: 25rpx;
@@ -42,14 +42,14 @@
   display: block;
 }
 
-.top-layout .user-layout .img-head {
+.top-layout > .user-layout > .img-head {
   width: 150rpx;
   height: 150rpx;
   border-radius: 50%;
   border: 8rpx solid #ffede2;
 }
 
-.top-layout .user-layout .data-layout {
+.top-layout > .user-layout > .data-layout {
   width: 465rpx;
   margin-left: 20rpx;
   height: 150rpx;
@@ -57,14 +57,14 @@
   flex-direction: column;
 }
 
-.top-layout .user-layout .data-layout .top-view {
+.top-layout > .user-layout > .data-layout > .top-view {
   flex: 1;
   display: flex;
   align-items: center;
   align-content: center;
 }
 
-.top-layout .user-layout .data-layout .top-view .nick {
+.top-layout > .user-layout > .data-layout > .top-view > .nick {
   font-weight: bold;
   font-size: 32rpx;
   width: 285rpx;
@@ -74,18 +74,18 @@
   text-overflow: ellipsis;
 }
 
-.top-layout .user-layout .data-layout .top-view .email {
+.top-layout > .user-layout > .data-layout > .top-view > .email {
   width: 50rpx;
   height: auto;
   margin-left: 15rpx;
   display: block;
 }
 
-.top-layout .user-layout .data-layout .middle-line {
+.top-layout > .user-layout > .data-layout > .middle-line {
   position: relative;
 }
 
-.top-layout .user-layout .data-layout .middle-line::after {
+.top-layout > .user-layout > .data-layout > .middle-line::after {
   content: " ";
   position: absolute;
   left: 0;
@@ -100,7 +100,7 @@
   transform: scaleY(0.5);
 }
 
-.top-layout .user-layout .data-layout .bottom-view {
+.top-layout > .user-layout > .data-layout > .bottom-view {
   flex: 1;
   display: flex;
   align-items: center;
@@ -108,13 +108,13 @@
   align-content: center;
 }
 
-.top-layout .user-layout .data-layout .bottom-view .middle-line {
+.top-layout > .user-layout > .data-layout > .bottom-view > .middle-line {
   height: 40rpx;
   border-left: 1rpx dashed #f37c3b;
   margin: 0 15rpx;
 }
 
-.top-layout .user-layout .data-layout .bottom-view .right {
+.top-layout > .user-layout > .data-layout > .bottom-view > .right {
   text-align: right;
 }
 
@@ -124,7 +124,7 @@
   box-sizing: border-box;
 }
 
-.list-layout .content {
+.list-layout > .content {
   display: flex;
   align-content: center;
   align-items: center;
@@ -132,34 +132,34 @@
   border-radius: 10rpx;
 }
 
-.list-layout .content .left-img {
+.list-layout > .content > .left-img {
   width: 220rpx;
   height: auto;
   display: block;
 }
 
-.list-layout .content .user-head {
+.list-layout > .content > .user-head {
   flex: 1;
   display: flex;
   align-content: center;
   align-items: center;
 }
 
-.list-layout .content .user-head .item-layout {
+.list-layout > .content > .user-head > .item-layout {
   width: 135rpx;
   height: 160rpx;
   margin-right: 30rpx;
   position: relative;
 }
 
-.list-layout .content .user-head .item-layout .head {
+.list-layout > .content > .user-head > .item-layout > .head {
   width: 123rpx;
   height: 123rpx;
   border-radius: 50%;
   border: 6rpx solid white;
 }
 
-.list-layout .content .user-head .item-layout .name {
+.list-layout > .content > .user-head > .item-layout > .name {
   width: 135rpx;
   display: inline-block;
   white-space: nowrap;
@@ -176,33 +176,137 @@
   text-overflow: ellipsis;
 }
 
-.integral-layout .title {
+.integral-layout > .title {
   display: flex;
   align-content: center;
   align-items: center;
   padding: 30rpx;
 }
 
-.integral-layout .title-hover {
+.integral-layout > .title-hover {
   background-color: rgba(0, 0, 0, 0.04);
 }
 
-.integral-layout .title .mark {
+.integral-layout > .title > .mark {
   background-color: #ff8745;
   width: 10rpx;
   height: 45rpx;
   border-radius: 10rpx;
 }
 
-.integral-layout .title text {
+.integral-layout > .title > text {
   flex: 1;
   margin-left: 20rpx;
   font-weight: bold;
   font-size: 34rpx;
 }
 
-.integral-layout .title .arrow {
+.integral-layout > .title > .arrow {
   width: 50rpx;
   height: auto;
   display: block;
+}
+
+.integral-layout > .loading-integral-layout {
+  height: 180rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.integral-layout > .empty-integral-layout {
+  height: 180rpx;
+  text-align: center;
+  line-height: 180rpx;
+}
+
+.integral-layout > .empty-integral-layout > .empty {
+  width: 330rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 25%;
+}
+
+.integral-layout > .empty-integral-layout > .empty > .empty-icon {
+  width: 150rpx;
+  height: auto;
+  display: block;
+}
+
+.integral-layout > .empty-integral-layout > .empty > .empty-hint {
+  color: #cdcdcd;
+}
+
+.integral-layout > .item-layout {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin-left: 60rpx;
+  padding: 20rpx 30rpx 20rpx 0;
+}
+
+.integral-layout > .item-layout .icon {
+  width: 100rpx;
+  height: auto;
+  display: block;
+}
+
+.integral-layout > .item-layout > .right-layout {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+}
+
+.integral-layout > .item-layout > .right-layout > .top-view {
+  flex: 1;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.integral-layout > .item-layout > .right-layout > .top-view > .title {
+  font-weight: bold;
+  font-size: 32rpx;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 15rpx;
+}
+
+.integral-layout > .item-layout > .right-layout > .top-view > .star-view {
+  text-align: right;
+}
+
+.integral-layout > .item-layout > .right-layout > .top-view > .title0 {
+  width: 520rpx;
+}
+
+.integral-layout > .item-layout > .right-layout > .top-view > .title1 {
+  width: 475rpx;
+}
+
+.integral-layout > .item-layout > .right-layout > .top-view > .title2 {
+  width: 445rpx;
+}
+
+.integral-layout > .item-layout > .right-layout > .top-view > .title3 {
+  width: 410rpx;
+}
+
+.integral-layout > .item-layout > .right-layout > .top-view > .title4 {
+  width: 370rpx;
+}
+
+.integral-layout > .item-layout > .right-layout > .top-view > .title5 {
+  width: 335rpx;
+}
+
+.integral-layout > .item-layout > .right-layout > .bottom-view {
+  flex: 1;
+  display: flex;
+  align-content: center;
+  align-items: center;
 }

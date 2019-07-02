@@ -8,8 +8,20 @@ Page({
    */
   data: {
     navHeight: app.globalData.navHeight,
-    // listData: null,
+    // listData: null, //榜单数据
     listData: [{}, {}, {}],
+    // integralData: null, //积分任务列表
+    // integralData: [],
+    integralData: [{
+      "title": "【系统】用户爱好兴趣问卷",
+      "star": 3,
+    }, {
+      "title": "免费领取限量保险大礼包",
+      "star": 2,
+    }, {
+      "title": "关注“慢漫陪着你”公众号",
+      "star": 2,
+    }],
   },
 
   /**
