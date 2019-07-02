@@ -27,6 +27,22 @@
     </view>
   </view>
 
+  <view class='line margin-top-30' />
+  <view class='list-layout'>
+    <view class='content'>
+      <image class='left-img' src='../../images/icon_list.png' mode='widthFix' />
+      <view class='user-head'>
+      <block wx:for="{{listData}}">
+        <view class='item-layout'>
+          <image class='head' src='../../images/icon_default_header.png' mode='widthFix'/>
+          <view class='name'>用户昵称</view>
+        </view>
+      </block>
+      </view>
+    </view>
+  </view>
+  <view class='line' />
+
   <view>我在这里</view>
   <view>我在这里</view>
   <view>我在这里</view>

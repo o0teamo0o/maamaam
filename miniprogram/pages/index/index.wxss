@@ -50,7 +50,7 @@
 }
 
 .top-layout .user-layout .data-layout {
-  width: 450rpx;
+  width: 465rpx;
   margin-left: 20rpx;
   height: 150rpx;
   display: flex;
@@ -116,4 +116,63 @@
 
 .top-layout .user-layout .data-layout .bottom-view .right {
   text-align: right;
+}
+
+.list-layout {
+  padding: 30rpx 20rpx;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.list-layout .content {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  background-color: #c14c3c;
+  border-radius: 10rpx;
+}
+
+.list-layout .content .left-img {
+  width: 220rpx;
+  height: auto;
+  display: block;
+}
+
+.list-layout .content .user-head {
+  flex: 1;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.list-layout .content .user-head .item-layout {
+  width: 135rpx;
+  height: 160rpx;
+  margin-right: 30rpx;
+  position: relative;
+}
+
+
+.list-layout .content .user-head .item-layout .head {
+  width: 123rpx;
+  height: 123rpx;
+  border-radius: 50%;
+  border: 6rpx solid white;
+}
+
+.list-layout .content .user-head .item-layout .name {
+  width: 135rpx;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 24rpx;
+  background-color: #ffd0ca;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  color: #c14c3c;
+  text-overflow: ellipsis;
 }
