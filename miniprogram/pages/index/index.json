@@ -4,6 +4,8 @@
   "backgroundTextStyle": "dark",
   "usingComponents": {
     "toast": "../../components/notify/index",
+    "tab": "../../components/tab/index",
+    "tabs": "../../components/tabs/index",
     "rate": "../../components/rate/index"
   }
 }

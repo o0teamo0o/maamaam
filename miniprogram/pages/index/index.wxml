@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <view class='top-layout'>
+  <!-- <view class='top-layout'>
     <image class='bg-top' src='../../images/bg_home_top.jpg' mode='widthFix' />
     <view class='nav' style='height:{{navHeight}}px'>
       <view class='nav-title'>慢漫悠享</view>
@@ -101,9 +101,19 @@
       </block>
     </block>
   </view>
-  <view class='line' />
+  <view class='line' /> -->
 
   <view class='line margin-top-30' />
+  <tabs bind:disabled="onClickDisabled" animated="true" swipeable="true" color="#ff8745">
+    <tab title="活动">
+    </tab>
+
+    <tab title="良品">
+    </tab>
+
+    <tab title="积分兑">
+    </tab>
+  </tabs>
 
   <view>我在这里</view>
   <view>我在这里</view>
