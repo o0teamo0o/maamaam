@@ -13,7 +13,7 @@ Page({
     // integralData: null, //积分任务列表
     // integralData: [],
     integralData: [{
-      "title": "【系统】用户爱好兴趣问卷",
+      "title": "【系统】用户爱好兴趣问卷【系统】用户爱好兴趣问卷",
       "star": 3,
     }, {
       "title": "免费领取限量保险大礼包",

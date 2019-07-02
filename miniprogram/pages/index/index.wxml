@@ -84,10 +84,18 @@
               <view wx:elif="{{item.star == 1}}" class="title title1">{{item.title}}</view>
               <view wx:else class="title title0">{{item.title}}</view>
               <view class='star-view'>
-                <rate value="{{item.star}}" readonly void-icon="star" count="{{item.star}}" void-color="#eee" color="#e86c2f" size="{{15}}" />
+                <rate value="{{item.star}}" readonly void-icon="star" count="{{item.star}}" void-color="#eee" color="#e86c2f" size="{{17}}" />
               </view>
             </view>
-            <view class='bottom-view'></view>
+            <view class='bottom-view'>
+              <view class='info'>
+                <text>奖励积分:999分</text>
+                <view class='middle-line' />
+                <text>人数：9999/9999</text>
+                <!-- <text>人数:不限</text> -->
+              </view>
+              <view class='time'>2019.07.25 截止</view>
+            </view>
           </view>
         </view>
         <view class='line margin-left-60' />

@@ -289,19 +289,19 @@
 }
 
 .integral-layout > .item-layout > .right-layout > .top-view > .title2 {
-  width: 445rpx;
+  width: 440rpx;
 }
 
 .integral-layout > .item-layout > .right-layout > .top-view > .title3 {
-  width: 410rpx;
+  width: 395rpx;
 }
 
 .integral-layout > .item-layout > .right-layout > .top-view > .title4 {
-  width: 370rpx;
+  width: 355rpx;
 }
 
 .integral-layout > .item-layout > .right-layout > .top-view > .title5 {
-  width: 335rpx;
+  width: 310rpx;
 }
 
 .integral-layout > .item-layout > .right-layout > .bottom-view {
@@ -309,4 +309,27 @@
   display: flex;
   align-content: center;
   align-items: center;
+  margin-top: 8rpx;
+  font-size: 24rpx;
+}
+
+.integral-layout > .item-layout > .right-layout > .bottom-view > .info {
+  color: #888;
+  width: 395rpx;
+}
+
+.integral-layout > .item-layout > .right-layout > .bottom-view > .info > .middle-line {
+  background-color: #e4681d;
+  display: inline-block;
+  width: 2rpx;
+  height: 30rpx;
+  margin: 0 15rpx;
+  vertical-align: middle;
+}
+
+.integral-layout > .item-layout > .right-layout > .bottom-view > .time {
+  text-align: right;
+  max-width: 190rpx;
+  font-size: 20rpx;
+  color: #e4681d;
 }
