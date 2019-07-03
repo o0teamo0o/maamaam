@@ -7,7 +7,8 @@ App({
     navHeight: 0, //导航栏高度
     isDebug: true,
     showLog: true,
-    debugPath: 'https://maam.time2drive.cn/',
+    // debugPath: 'https://maam.time2drive.cn/',
+    debugPath: 'http://114.115.160.56:9998/',
     releasePath: 'https://mina.maamaam.cn/',
     imagePath: 'https://mina.maamaam.cn/',
     screenWidth: 0, //屏幕宽度

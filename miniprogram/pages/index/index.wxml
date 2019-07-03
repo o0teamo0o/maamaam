@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <!-- <view class='top-layout'>
+  <view class='top-layout'>
     <image class='bg-top' src='../../images/bg_home_top.jpg' mode='widthFix' />
     <view class='nav' style='height:{{navHeight}}px'>
       <view class='nav-title'>慢漫悠享</view>
@@ -101,11 +101,51 @@
       </block>
     </block>
   </view>
-  <view class='line' /> -->
+  <view class='line' />
 
   <view class='line margin-top-30' />
   <tabs bind:disabled="onClickDisabled" animated="true" swipeable="true" color="#ff8745">
     <tab title="活动">
+      <view class='goods-recommend-layout'>
+        <view class='item-layout' wx:for="{{goodsRecommendList}}" wx:key="key">
+          <view class='img-content' catchtap='jumpGoodsInfoPage' data-info='{{item}}'>
+            <image wx:if="{{item.recommendImageUrl}}" class='goods-img' src="{{item.recommendImageUrl}}" mode='widthFix' />
+            <image wx:else class='goods-img' src='../../images/bg_banner_defalut.png' mode='widthFix' />
+            <image wx:if="{{item.isSignUp}}" class="mark-icon" src="../../images/{{item.isActivity == '1' ? 'icon_signup' : 'icon_buy'}}.png" mode='widthFix' />
+          </view>
+          <view class='explain-layout' catchtap='jumpGoodsInfoPage' data-info='{{item}}'>
+            <view class='left-view'>
+              <view class='title-layout'>
+                <text wx:if="{{item.isActivity == '1'}}" class='big-title'>{{item.title}}</text>
+                <text class='small-title'>{{item.stitle}}</text>
+              </view>
+              <view class='small-title'>{{item.remark}}</view>
+            </view>
+            <view class='right-view'>
+              <view wx:if="{{item.activityAmount}}">
+                <view class='price-text'>{{item.activityAmount}}</view>
+              </view>
+              <view wx:else class='price-text'>{{item.amount}}</view>
+            </view>
+          </view>
+          <view class='sign-up-layout'>
+            <view class='left-view'>
+              <van-button custom-class='btn-recommend' open-type="share" data="{{item}}">推荐给好友</van-button>
+              <!-- <button class='btn-recommend' open-type="share" data-item="{{item}}">推荐给好友</button> -->
+              <text class='btn-sign-up' wx:if="{{item.isSignUp == false}}" catchtap='onSignUp' data-info='{{item}}'>{{item.isActivity == '1' ? '我要报名' : '我要购买'}}</text>
+              <text class='allowance'>剩余: {{item.productNumber}} 份</text>
+            </view>
+            <view class='right-view'>
+              <view wx:if="{{item.activityAmount}}">
+                <view class='original-text'>{{item.amount}}</view>
+                <view>{{item.company}}</view>
+              </view>
+              <view wx:else>{{item.company}}</view>
+            </view>
+          </view>
+          <view class='goods-line' />
+        </view>
+      </view>
     </tab>
 
     <tab title="良品">
@@ -114,67 +154,4 @@
     <tab title="积分兑">
     </tab>
   </tabs>
-
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在这里</view>
-  <view>我在底部</view>
 </view>
