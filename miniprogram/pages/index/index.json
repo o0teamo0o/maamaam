@@ -3,6 +3,7 @@
   "navigationStyle": "custom",
   "backgroundTextStyle": "dark",
   "usingComponents": {
+    "van-button": "../../components/button/index",
     "toast": "../../components/notify/index",
     "tab": "../../components/tab/index",
     "tabs": "../../components/tabs/index",

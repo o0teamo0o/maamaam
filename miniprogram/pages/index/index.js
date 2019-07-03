@@ -26,7 +26,7 @@ Page({
       "title": "关注“慢漫陪着你”公众号",
       "star": 2,
     }],
-    goodsRecommendList: [{
+    tourProductList: [{
       "activityAmount": 399,
       "activityEndDate": "2019-07-31",
       "activityStartDate": "2019-04-30",
@@ -62,11 +62,26 @@ Page({
       "isLockTime": 0,
       "isRecommend": 0,
       "isSignUp": false,
-      "monthArr": [
-        { "month": "4月", "year": "2019-04", "date": "2019-04-01" },
-        { "month": "5月", "year": "2019-05", "date": "2019-05-01" },
-        { "month": "6月", "year": "2019-06", "date": "2019-06-01" },
-        { "month": "7月", "year": "2019-07", "date": "2019-07-01" }
+      "monthArr": [{
+          "month": "4月",
+          "year": "2019-04",
+          "date": "2019-04-01"
+        },
+        {
+          "month": "5月",
+          "year": "2019-05",
+          "date": "2019-05-01"
+        },
+        {
+          "month": "6月",
+          "year": "2019-06",
+          "date": "2019-06-01"
+        },
+        {
+          "month": "7月",
+          "year": "2019-07",
+          "date": "2019-07-01"
+        }
       ],
       "productNumber": 30,
       "recommendImageUrl": "http://maam.oss-cn-shenzhen.aliyuncs.com/20190506101815/5a244bf70b3141208533b2edea1397fe-banner1.jpg?Expires=1872469095&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=%2B612hQ5wflRTsrWtV77t3MhEmd8%3D",
@@ -79,6 +94,71 @@ Page({
       "surplusNumber": 0,
       "ticketCount": 1,
       "title": "出游 / ",
+    }], //商品信息
+    goodsProductList: [{
+      "activityAmount": 0,
+      "activityEndDate": "2019-07-31",
+      "activityStartDate": "2019-04-30",
+      "amount": 13.5,
+      "bannerRecommendList": [
+        "http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101148/99eaa9f6b945486ab80d7dea0514f56d-banner.jpg?Expires=1874542308&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=H36SiA1xryuqwhquw7EPdtW78Hg%3D"
+      ],
+      "bigTitle": "小聚",
+      "buyPrice": 13.5,
+      "classType": 0,
+      "company": "元/两支",
+      "cycle": 10,
+      "detailRecommendList": [
+        "http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101202/18d72e971147442aa29451caa84ad75f-%E6%B2%B9%E7%93%B6_04.jpg?Expires=1874542322&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=Dn0s9zQnYzgQy9Y5t0W6qYW3vzc%3D",
+        "http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101209/d6c14a8203064f9bb8905411d7d489e9-%E6%B2%B9%E7%93%B6_05.jpg?Expires=1874542329&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=9enOHq5sv2rpRnDcXp65Rtt%2FeNY%3D",
+        "http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101217/439c6301d50c4b9c8d413bfc39eb2fad-%E6%B2%B9%E7%93%B6_06.jpg?Expires=1874542337&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=WOejc4AehSdik3ihQkReeD5jWJY%3D",
+        "http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101224/26fdc567253540cf8ccd3a415e94aa9b-%E6%B2%B9%E7%93%B6_07.jpg?Expires=1874542344&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=wQJUBEeasrdxXQWZMtlh4HKU2sE%3D",
+        "http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101231/a51d2f69017e40ba8ee722d1955a11ee-%E6%B2%B9%E7%93%B6_08.jpg?Expires=1874542351&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=a0hoZTiC6LpooDgUm11R1Bpd4o4%3D",
+        "http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101238/4aab3f2caf754755abf7d16f8dda58d1-%E6%B2%B9%E7%93%B6_09.jpg?Expires=1874542358&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=HzmQC1Z%2F8U6BxLmFhVaVCYRakvc%3D",
+        "http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101244/c3f60ca0a8c14313940424da63e12459-%E6%B2%B9%E7%93%B6_10.jpg?Expires=1874542364&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=CDdbmrnM2LJkniw%2Bo%2Bcz2Y4EbbY%3D",
+        "http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101253/316c24068e5c46d4a4b764ffb0775710-%E6%B2%B9%E7%93%B6_11.jpg?Expires=1874542373&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=DAh8EzwCsIgO7vyQLlXvGo8s0YQ%3D",
+        "http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101300/8f60335b3c094f29b19303141b869939-%E6%B2%B9%E7%93%B6_12.jpg?Expires=1874542380&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=SykYL0x4u7uPFP97AuQqYTGQ46A%3D",
+        "http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101305/c29bc8cb481742b4b05f4cc2f267e8dd-%E6%B2%B9%E7%93%B6_13.jpg?Expires=1874542386&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=He4HLTq4yhLt26KW7f1XDyWSSrw%3D"
+      ],
+      "detailsImageUrl": "http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101202/18d72e971147442aa29451caa84ad75f-%E6%B2%B9%E7%93%B6_04.jpg?Expires=1874542322&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=Dn0s9zQnYzgQy9Y5t0W6qYW3vzc%3D;http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101209/d6c14a8203064f9bb8905411d7d489e9-%E6%B2%B9%E7%93%B6_05.jpg?Expires=1874542329&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=9enOHq5sv2rpRnDcXp65Rtt%2FeNY%3D;http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101217/439c6301d50c4b9c8d413bfc39eb2fad-%E6%B2%B9%E7%93%B6_06.jpg?Expires=1874542337&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=WOejc4AehSdik3ihQkReeD5jWJY%3D;http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101224/26fdc567253540cf8ccd3a415e94aa9b-%E6%B2%B9%E7%93%B6_07.jpg?Expires=1874542344&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=wQJUBEeasrdxXQWZMtlh4HKU2sE%3D;http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101231/a51d2f69017e40ba8ee722d1955a11ee-%E6%B2%B9%E7%93%B6_08.jpg?Expires=1874542351&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=a0hoZTiC6LpooDgUm11R1Bpd4o4%3D;http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101238/4aab3f2caf754755abf7d16f8dda58d1-%E6%B2%B9%E7%93%B6_09.jpg?Expires=1874542358&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=HzmQC1Z%2F8U6BxLmFhVaVCYRakvc%3D;http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101244/c3f60ca0a8c14313940424da63e12459-%E6%B2%B9%E7%93%B6_10.jpg?Expires=1874542364&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=CDdbmrnM2LJkniw%2Bo%2Bcz2Y4EbbY%3D;http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101253/316c24068e5c46d4a4b764ffb0775710-%E6%B2%B9%E7%93%B6_11.jpg?Expires=1874542373&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=DAh8EzwCsIgO7vyQLlXvGo8s0YQ%3D;http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101300/8f60335b3c094f29b19303141b869939-%E6%B2%B9%E7%93%B6_12.jpg?Expires=1874542380&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=SykYL0x4u7uPFP97AuQqYTGQ46A%3D;http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101305/c29bc8cb481742b4b05f4cc2f267e8dd-%E6%B2%B9%E7%93%B6_13.jpg?Expires=1874542386&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=He4HLTq4yhLt26KW7f1XDyWSSrw%3D;",
+      "endDate": "2019-07-31",
+      "id": 31,
+      "imageUrl": "http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101148/99eaa9f6b945486ab80d7dea0514f56d-banner.jpg?Expires=1874542308&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=H36SiA1xryuqwhquw7EPdtW78Hg%3D;",
+      "isActivity": 0,
+      "isLockTime": 0,
+      "isRecommend": 0,
+      "isSignUp": false,
+      "monthArr": [{
+          "month": "4月",
+          "year": "2019-04",
+          "date": "2019-04-01"
+        },
+        {
+          "month": "5月",
+          "year": "2019-05",
+          "date": "2019-05-01"
+        },
+        {
+          "month": "6月",
+          "year": "2019-06",
+          "date": "2019-06-01"
+        },
+        {
+          "month": "7月",
+          "year": "2019-07",
+          "date": "2019-07-01"
+        }
+      ],
+      "productNumber": 30,
+      "recommendImageUrl": "http://maam.oss-cn-shenzhen.aliyuncs.com/20190530101148/99eaa9f6b945486ab80d7dea0514f56d-banner.jpg?Expires=1874542308&OSSAccessKeyId=LTAI4Ow2Nr41We1R&Signature=H36SiA1xryuqwhquw7EPdtW78Hg%3D",
+      "remark": "不漏油 不挂油 【限时包邮】",
+      "singlyTickerPrice": 13.5,
+      "startDate": "2019-04-30",
+      "status": 0,
+      "stitle": "【厨房神器】玻璃油瓶",
+      "surplusNumber": 0,
+      "ticketCount": 1,
+      "title": "小聚 / ",
     }], //商品信息
   },
 
