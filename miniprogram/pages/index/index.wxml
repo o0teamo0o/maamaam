@@ -104,7 +104,7 @@
   <view class='line' />
 
   <view class='line margin-top-30' />
-  <tabs active="{{ currentTabIndex }}" bind:disabled="onClickDisabled" animated="true" swipeable="true" color="#ff8745">
+  <tabs active="{{ currentTabIndex }}" bind:disabled="onClickDisabled" color="#ff8745">
     <tab title="活动">
       <view class='goods-recommend-layout'>
         <view class='item-layout' wx:for="{{tourProductList}}" wx:key="key">

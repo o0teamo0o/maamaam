@@ -531,7 +531,7 @@
 }
 
 .integral-exchange-layout > .list-half > .card > .bottom-view > .num-view > .price {
-  font-size: 40rpx;
+  font-size: 50rpx;
   font-family: 'Corki';
   font-weight: bold;
   color: #e4681d;
