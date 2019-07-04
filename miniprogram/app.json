@@ -8,6 +8,7 @@
       "root": "activity",
       "name": "活动",
       "pages": [
+        "pages/red_envelope_rain/index"
       ]
     },
     {

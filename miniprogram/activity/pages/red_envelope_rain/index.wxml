@@ -1,0 +1,7 @@
+<!--miniprogram/activity/pages/red_envelope_rain/index.wxml-->
+<view>
+</view>
+
+<view>
+  <red-dialog show="{{ show }}" bind:close="onClose" />
+</view>

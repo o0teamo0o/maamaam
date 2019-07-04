@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "red-dialog": "../../../components/red-packet-dialog/index"
+  }
+}
