@@ -12,6 +12,7 @@ Page({
    */
   data: {
     navHeight: app.globalData.navHeight,
+    currentTabIndex: 0,
     listData: [{}, {}, {}],
     integralData: [{
       "url": "icon_integral_questionnaire.png",
@@ -160,6 +161,69 @@ Page({
       "ticketCount": 1,
       "title": "小聚 / ",
     }], //商品信息
+    integralExchangeData: [{
+        name: '大脸猫爱吃鱼大脸猫爱吃鱼大脸猫爱吃鱼大脸猫爱吃鱼',
+        heart_num: '1',
+        title: '你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识',
+        url: 'https://image.fkgou.com/uploadfile/product/152013/2017/12/13/1513131668.jpg',
+        price: "19.9",
+        integral: 5800
+      },
+      {
+        name: '大脸猫爱吃鱼',
+        heart_num: '2',
+        title: '你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识',
+        url: 'https://image.fkgou.com//image.php/shop/data/upload/media/fe27be6c8c0091aa6eb9ab4188e2477e/131109/131109/image/20180512/1526095940498360.jpg',
+        price: "688.8",
+        integral: 68888
+      },
+      {
+        name: '大脸猫爱吃鱼',
+        heart_num: '3',
+        title: '你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识',
+        url: 'https://image.fkgou.com//image.php/shop/data/upload/media/fe27be6c8c0091aa6eb9ab4188e2477e/154825/156113/image/20181015/1539612872672902.jpg',
+        price: "9.9",
+        integral: 680
+      }, {
+        name: '大脸猫爱吃鱼',
+        heart_num: '4',
+        title: '你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识',
+        url: 'http://img4.imgtn.bdimg.com/it/u=2748975304,2710656664&fm=26&gp=0.jpg',
+        price: "388.0",
+        integral: 1500
+      },
+      {
+        name: '大脸猫爱吃鱼',
+        heart_num: '5',
+        title: '你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识',
+        url: 'https://image.fkgou.com//image.php/shop/data/upload/media/fe27be6c8c0091aa6eb9ab4188e2477e/155287/155287/image/20181031/1540974543645385.jpg',
+        price: "10.5",
+        integral: 9999
+      },
+      {
+        name: '大脸猫爱吃鱼',
+        heart_num: '6',
+        title: '你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识',
+        url: 'https://image.fkgou.com//image.php/shop/data/upload/media/fe27be6c8c0091aa6eb9ab4188e2477e/260026/155848/image/20181218/1545100742724187.jpg',
+        price: "199.9",
+        integral: 4600
+      },
+      {
+        name: '大脸猫爱吃鱼',
+        heart_num: '7',
+        title: '你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识',
+        url: 'http://img4.imgtn.bdimg.com/it/u=2748975304,2710656664&fm=26&gp=0.jpg',
+        price: "100.0",
+        integral: 7000
+      }, {
+        name: '大脸猫爱吃鱼',
+        heart_num: '8',
+        title: '你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识你所不知道的红酒知识',
+        url: 'http://img2.imgtn.bdimg.com/it/u=1561660534,130168102&fm=26&gp=0.jpg',
+        price: "69.9",
+        integral: 1500
+      }
+    ]
   },
 
   /**

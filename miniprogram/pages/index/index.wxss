@@ -457,6 +457,95 @@
   background: linear-gradient(to left, #efefef, #777, #efefef);
 }
 
-.good-products-layout {
+.integral-exchange-layout {
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
+.integral-exchange-layout > .list-half {
+  width: 355rpx;
+  box-sizing: border-box;
+}
+
+.integral-exchange-layout > .list-half > .card {
+  background-color: white;
+  overflow: hidden;
+  margin-bottom: 10rpx;
+  border: 1rpx solid #f5ede3;
+  position: relative;
+}
+
+.integral-exchange-layout > .list-half > .card > .card-click {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.integral-exchange-layout > .list-half > .card > .card-hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.integral-exchange-layout > .list-half > .card > .img-layout {
+  position: relative;
+}
+
+.integral-exchange-layout > .list-half > .card > .img-layout > .img-goods {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.integral-exchange-layout > .list-half > .card > .img-layout > .name-view {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 15rpx 30rpx;
+  box-sizing: border-box;
+  color: #bb9f7a;
+  display: inline-block;
+  width: 355rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.integral-exchange-layout > .list-half > .card > .bottom-view {
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.integral-exchange-layout > .list-half > .card > .bottom-view > .title {
+  color: #3a3a3a;
+}
+
+.integral-exchange-layout > .list-half > .card > .bottom-view > .num-view {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin-top: 15rpx;
+}
+
+.integral-exchange-layout > .list-half > .card > .bottom-view > .num-view > .price {
+  font-size: 40rpx;
+  font-family: 'Corki';
+  font-weight: bold;
+  color: #e4681d;
+}
+
+.integral-exchange-layout > .list-half > .card > .bottom-view > .num-view > .integral-view {
+  text-align: right;
+  flex: 1;
+  font-size: 24rpx;
+}
+
+.integral-exchange-layout > .list-half > .card > .bottom-view > .num-view > .integral-view > .value {
+  font-size: 34rpx;
+  font-family: 'Corki';
+  font-weight: bold;
+  color: #696969;
 }

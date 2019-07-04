@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <!-- <view class='top-layout'>
+  <view class='top-layout'>
     <image class='bg-top' src='../../images/bg_home_top.jpg' mode='widthFix' />
     <view class='nav' style='height:{{navHeight}}px'>
       <view class='nav-title'>慢漫悠享</view>
@@ -101,10 +101,10 @@
       </block>
     </block>
   </view>
-  <view class='line' /> -->
+  <view class='line' />
 
   <view class='line margin-top-30' />
-  <tabs bind:disabled="onClickDisabled" animated="true" swipeable="true" color="#ff8745">
+  <tabs active="{{ currentTabIndex }}" bind:disabled="onClickDisabled" animated="true" swipeable="true" color="#ff8745">
     <tab title="活动">
       <view class='goods-recommend-layout'>
         <view class='item-layout' wx:for="{{tourProductList}}" wx:key="key">
@@ -190,6 +190,42 @@
     </tab>
 
     <tab title="积分兑">
+      <view class="integral-exchange-layout">
+        <view class='list-half'>
+          <view wx:for="{{integralExchangeData}}" wx:key="index" wx:if="{{index%2 == 0}}" class='card'>
+            <view class="img-layout">
+              <image class="img-goods" src="{{item.url}}" mode="widthFix" />
+              <view class="name-view">{{item.name}}</view>
+            </view>
+            <view class="bottom-view">
+              <view class="title">{{item.name}}</view>
+              <view class="num-view">
+                <view class="price">¥{{item.price}}</view>
+                <view class="integral-view">
+                  <text class="value">{{item.integral}} </text> 积分</view>
+              </view>
+            </view>
+            <view class="card-click" hover-class='card-hover' />
+          </view>
+        </view>
+        <view class='list-half'>
+          <view wx:for="{{integralExchangeData}}" wx:key="index" wx:if="{{index%2 != 0}}" class='card'>
+            <view class="img-layout">
+              <image class="img-goods" src="{{item.url}}" mode="widthFix" />
+              <view class="name-view">{{item.name}}</view>
+            </view>
+            <view class="bottom-view">
+              <view class="title">{{item.name}}</view>
+              <view class="num-view">
+                <view class="price">¥{{item.price}}</view>
+                <view class="integral-view">
+                  <text class="value">{{item.integral}} </text> 积分</view>
+              </view>
+            </view>
+            <view class="card-click" hover-class='card-hover' />
+          </view>
+        </view>
+      </view>
     </tab>
   </tabs>
 </view>
