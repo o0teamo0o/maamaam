@@ -1,6 +1,12 @@
-import { VantComponent } from '../common/component';
-import { transition } from '../mixins/transition';
-import { safeArea } from '../mixins/safe-area';
+import {
+  VantComponent
+} from '../common/component';
+import {
+  transition
+} from '../mixins/transition';
+import {
+  safeArea
+} from '../mixins/safe-area';
 VantComponent({
   classes: [
     'enter-class',
@@ -40,6 +46,23 @@ VantComponent({
     this.observeClass();
   },
   methods: {
+    onConfirm() {
+      this.onClose(true);
+    },
+    onCancel() {
+      this.onClose(false);
+    },
+    onClose(action) {
+      if (!this.data.asyncClose) {
+        this.close();
+      }
+      this.$emit('close', action);
+    },
+    close() {
+      this.set({
+        show: false
+      });
+    },
     onClickOverlay() {
       this.$emit('click-overlay');
       if (this.data.closeOnClickOverlay) {
@@ -47,10 +70,15 @@ VantComponent({
       }
     },
     observeClass() {
-      const { transition, position } = this.data;
+      const {
+        transition,
+        position
+      } = this.data;
       this.updateClasses(transition || position);
       if (transition === 'none') {
-        this.set({ duration: 0 });
+        this.set({
+          duration: 0
+        });
       }
     }
   }

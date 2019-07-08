@@ -3,6 +3,7 @@
   "navigationStyle": "custom",
   "backgroundTextStyle": "dark",
   "usingComponents": {
+    "red-dialog": "../../components/red-packet-dialog/index",
     "van-button": "../../components/button/index",
     "toast": "../../components/notify/index",
     "tab": "../../components/tab/index",

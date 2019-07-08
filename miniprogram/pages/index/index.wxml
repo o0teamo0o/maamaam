@@ -229,3 +229,8 @@
     </tab>
   </tabs>
 </view>
+
+
+<view>
+  <red-dialog show="{{ isShowRedDialog }}" bind:close="onRedDialogClose" />
+</view>

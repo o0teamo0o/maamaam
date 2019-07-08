@@ -1,1 +1,15 @@
 /* miniprogram/activity/pages/red_envelope_rain/index.wxss */
+
+.body {
+  position: relative;
+  background: linear-gradient(to bottom, #ffbdc2, #ff7b73, #f97a6c);
+}
+
+.body > .bg-bottom {
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  display: block;
+}
