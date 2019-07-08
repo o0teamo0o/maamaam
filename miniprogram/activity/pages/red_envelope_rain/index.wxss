@@ -1,4 +1,5 @@
 /* miniprogram/activity/pages/red_envelope_rain/index.wxss */
+@import "../../../style/money.wxss";
 
 .body {
   background: linear-gradient(to bottom, #ffbdc2, #ff7b73, #f97a6c);
@@ -74,6 +75,14 @@
 
 .count-down-layout > .red-package-layout > .time-count-down-layout {
   position: relative;
-  display: flex;
-  flex-direction: column;
+}
+
+.count-down-layout > .red-package-layout > .time-count-down-layout > .time {
+  color: #d25040;
+  font-size: 100rpx;
+  font-weight: bold;
+  font-family: 'Corki';
+  position: absolute;
+  text-align: center;
+  width: 80vw;
 }
