@@ -1,4 +1,22 @@
 <!--miniprogram/activity/pages/red_envelope_rain/index.wxml-->
 <view class='body'>
-  <image class="bg-bottom" src="../../images/bg_rain_bottom.png" mode="widthFix" />
+  <block wx:if="{{isCountDown}}">
+    <view class="count-down-layout">
+      <image class="img-100vw bg-red-package" src="../../images/icon_red_package.png" mode="widthFix" />
+      <view class="red-package-layout">
+        <image class="red-text" src="../../images/icon_red_text.png" mode="widthFix" />
+        <image class="img-100vw" src="../../images/icon_red_package_top.png" mode="widthFix" />
+        <view class="time-count-down-layout">
+          <image class="img-100vw" src="../../images/icon_red_middle1.png" mode="widthFix" />
+        </view>
+        <image class="img-100vw" src="../../images/icon_red_middle2.png" mode="widthFix" />
+        <view class="red-package-bottom">
+          <image class="img-100vw" src="../../images/icon_red_package_bottom.png" mode="widthFix" />
+          <image class="btn-ad" src="../../images/btn_red_ad.png" mode="widthFix" />
+        </view>
+        <image class="bg-red-rain" src="../../images/bg_red_package_rain.png" mode="widthFix" />
+      </view>
+      <image class="bg-bottom" src="../../images/bg_rain_bottom.png" mode="widthFix" />
+    </view>
+  </block>
 </view>

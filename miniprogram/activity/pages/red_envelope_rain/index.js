@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    show: false
+    isCountDown: true, //是否是红包倒计时
   },
 
   /**
