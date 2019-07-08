@@ -5,6 +5,16 @@
   background: linear-gradient(to bottom, #ffbdc2, #ff7b73, #f97a6c);
 }
 
+.body > .btn-back {
+  width: 30vw;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 50rpx;
+  z-index: 999;
+  display: block;
+}
+
 .count-down-layout {
   width: 100vw;
   height: 100vh;

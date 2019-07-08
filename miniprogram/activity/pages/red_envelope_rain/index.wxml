@@ -1,5 +1,6 @@
 <!--miniprogram/activity/pages/red_envelope_rain/index.wxml-->
 <view class='body'>
+  <image class="btn-back" src="../../images/btn_red_back.png" mode="widthFix" catchtap="onBack" />
   <block wx:if="{{isCountDown}}">
     <view class="count-down-layout">
       <image class="img-100vw bg-red-package" src="../../images/icon_red_package.png" mode="widthFix" />

@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isCountDown: true, //是否是红包倒计时
+    isCountDown: false, //是否是红包倒计时
   },
 
   /**
@@ -15,10 +15,13 @@ Page({
 
   },
 
-  onRedDialogClose: function(e) {
-    if (e.detail) {
-
-    }
+  /**
+   * 返回上一个页面
+   */
+  onBack: function() {
+    wx.navigateBack({
+      delta: 1
+    })
   },
 
   /**
