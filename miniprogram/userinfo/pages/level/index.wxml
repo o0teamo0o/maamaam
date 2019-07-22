@@ -1,0 +1,33 @@
+<!--miniprogram/userinfo/pages/level/index.wxml-->
+<view class='body'>
+  <view class="wrap flex flex-v">
+    <view class='title-layout'>
+      <view class='nav' style='height:{{navHeight}}px'>
+        <image src='../../../images/btn_back_white.png' mode='aspectFit' class='back' bindtap='onBack' />
+        <view class='nav-title color-white'>用户等级</view>
+      </view>
+    </view>
+    <view class='main flex-1'>
+      <view class="top-layout">
+        <view class="userinfo-layout">
+          <view class="flex-1" />
+          <image class="img-sex" src="../../../images/icon_sex_female.png" mode="widthFix" />
+          <text class="name">名称</text>
+          <view class="flex-1" />
+        </view>
+        <view class="progress-layout">
+          <view class="flex-1" />
+          <rate class="level" value="3" readonly void-icon="star" void-color="#5ac6a1" color="#FFFFFF" size="{{15}}" />
+          <view class="progress">
+            <view class="left-view" />
+            <view class="middle-view" />
+            <view class="right-view" />
+          </view>
+          <image class="img-privilege" src="../../images/icon_privilege.png" mode="widthFix" />
+          <view class="flex-1" />
+          <image class="img-look-privilege" src="../../images/icon_look_privilege.png" mode="widthFix" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

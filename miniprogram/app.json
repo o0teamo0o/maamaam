@@ -20,7 +20,9 @@
       "root": "userinfo",
       "name": "用户",
       "pages": [
-        "pages/index/index"
+        "pages/index/index",
+        "pages/integral/index",
+        "pages/level/index"
       ]
     }
   ],

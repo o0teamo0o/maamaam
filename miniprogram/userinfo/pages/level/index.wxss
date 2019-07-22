@@ -1,0 +1,84 @@
+/* miniprogram/userinfo/pages/level/index.wxss */
+
+.title-layout {
+  background-color: #3dcd9c;
+}
+
+.top-layout {
+  background-color: #3dcd9c;
+}
+
+.top-layout>.userinfo-layout {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding: 20rpx 0 40rpx 0;
+}
+
+.top-layout>.userinfo-layout>.img-sex {
+  width: 35rpx;
+  height: auto;
+  margin-right: 30rpx;
+  display: block;
+}
+
+.top-layout>.userinfo-layout>.name {
+  color: white;
+  font-size: 32rpx;
+}
+
+.top-layout>.progress-layout {
+  margin: 0 30rpx;
+  height: 100rpx;
+  background-color: #13ad79;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.top-layout>.progress-layout>.img-look-privilege {
+  position: absolute;
+  right: -30rpx;
+  width: 120rpx;
+  height: auto;
+  display: block;
+  top: -35rpx;
+}
+
+.top-layout>.progress-layout>.progress {
+  width: 300rpx;
+  margin: 0 30rpx;
+  height: 40rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  border-radius: 20rpx;
+  background-color: #0b9466;
+}
+
+.top-layout>.progress-layout>.progress>.left-view {
+  flex: 2;
+  background-color: #088a5e;
+  height: 40rpx;
+  border-radius: 20rpx;
+}
+
+.top-layout>.progress-layout>.progress>.right-view {
+  flex: 1;
+  height: 40rpx;
+}
+
+.top-layout>.progress-layout>.progress>.middle-view {
+  width: 1rpx;
+  height: 30rpx;
+  background-color: #93ccb8;
+}
+
+.top-layout>.progress-layout>.img-privilege {
+  width: 70rpx;
+  height: auto;
+  display: block;
+}
