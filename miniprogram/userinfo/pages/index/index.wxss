@@ -1,0 +1,48 @@
+/* miniprogram/userinfo/pages/index/index.wxss */
+
+.item-frame-layout {
+  background-color: white;
+}
+
+.item-frame-layout>.top-item-layout {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding: 20rpx 40rpx;
+  color: #333;
+}
+
+.item-frame-layout>.top-item-layout>.img-header {
+  width: 200rpx;
+  height: 200rpx;
+  display: block;
+  border-radius: 50%;
+}
+
+.item-frame-layout>.top-item-layout>.img-sex {
+  margin: 0 10rpx;
+  width: 40rpx;
+  height: auto;
+  display: block;
+}
+
+.item-frame-layout>.top-item-layout>.name {
+  flex: 1;
+  font-weight: bold;
+  font-size: 34rpx;
+}
+
+.img-arrow {
+  width: 40rpx;
+  height: auto;
+  display: block;
+}
+
+.item-frame-layout>.item-layout {
+  padding: 35rpx 40rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  color: #666;
+}

@@ -304,6 +304,14 @@ page {
   justify-content: space-between;
 }
 
+.margin-top-10 {
+  margin-top: 10rpx;
+}
+
+.margin-top-15 {
+  margin-top: 15rpx;
+}
+
 .margin-top-30 {
   margin-top: 30rpx;
 }
@@ -324,6 +332,10 @@ page {
   margin-left: 30rpx;
 }
 
+.margin-left-40 {
+  margin-left: 40rpx;
+}
+
 .margin-left-60 {
   margin-left: 60rpx;
 }
@@ -334,6 +346,10 @@ page {
 
 .margin-left-40 {
   margin-left: 40rpx;
+}
+
+.margin-left-70 {
+  margin-left: 70rpx;
 }
 
 .margin-right-15 {
@@ -426,4 +442,8 @@ page {
 
 .text-bold {
   font-weight: bold;
+}
+
+.click-hover {
+  background-color: rgba(0, 0, 0, 0.07);
 }

@@ -1,6 +1,7 @@
 {
   "navigationStyle": "custom",
   "usingComponents": {
+    "cax": "./cax/cax",
     "red-dialog": "../../../components/red-packet-dialog/index"
   }
 }

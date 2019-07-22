@@ -1,6 +1,6 @@
 <!--miniprogram/activity/pages/red_envelope_rain/index.wxml-->
 <view class='body'>
-  <image class="btn-back" src="../../images/btn_red_back.png" mode="widthFix" catchtap="onBack" />
+  <image wx:if="{{isCountDown}}" class="btn-back" src="../../images/btn_red_back.png" mode="widthFix" catchtap="onBack" />
   <block wx:if="{{isCountDown}}">
     <view class="count-down-layout">
       <image class="img-100vw bg-red-package" src="../../images/icon_red_package.png" mode="widthFix" />
@@ -19,6 +19,56 @@
         <image class="bg-red-rain" src="../../images/bg_red_package_rain.png" mode="widthFix" />
       </view>
       <image class="bg-bottom" src="../../images/bg_rain_bottom.png" mode="widthFix" />
+    </view>
+  </block>
+  <block>
+    <view class="red-rain-layout">
+      <cax id="myCanvas" class="cax-canvas">
+      </cax>
+      <view class="text-layout">
+        <view style='height:{{navHeight}}px' />
+        <view class="score-layout">
+          <view class="item-layout">
+            <view class="mark">现金红包</view>
+            <view class="value">
+              <text class="number">15</text>
+              <text class="top-mark">分</text>
+            </view>
+          </view>
+          <view class="item-layout">
+            <view class="mark">红包时间</view>
+            <view class="value">
+              <text class="number">00:02:59</text>
+              <text class="top-mark"></text>
+            </view>
+          </view>
+          <view class="item-layout">
+            <view class="mark">翻倍</view>
+            <view class="value">
+              <text class="number">X2</text>
+              <text class="top-mark"></text>
+            </view>
+          </view>
+        </view>
+        <view class="score-layout">
+          <view class="item-layout">
+            <view class="mark">积分红包</view>
+            <view class="value">
+              <text class="number">9</text>
+              <text class="top-mark">分</text>
+            </view>
+          </view>
+          <view class="item-layout">
+          </view>
+          <view class="item-layout">
+          </view>
+        </view>
+      </view>
+
+      <view class="receiveRedPackage {{isClickRedPackage ? 'animition' : ' '}}">
+        <image class="open-red-package" src="../../images/big_money_red_package.png" mode="widthFix" />
+      </view>
+
     </view>
   </block>
 </view>

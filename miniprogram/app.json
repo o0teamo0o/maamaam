@@ -19,13 +19,15 @@
     {
       "root": "userinfo",
       "name": "用户",
-      "pages": []
+      "pages": [
+        "pages/index/index"
+      ]
     }
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarBackgroundColor": "#FFFFFF",
     "navigationBarTitleText": "慢漫悠享",
     "navigationBarTextStyle": "black"
   },
