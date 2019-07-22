@@ -32,6 +32,10 @@
   font-size: 34rpx;
 }
 
+.level {
+  margin-right: 30rpx;
+}
+
 .img-arrow {
   width: 40rpx;
   height: auto;

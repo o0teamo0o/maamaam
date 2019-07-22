@@ -15,6 +15,7 @@
         <view class="item-layout" hover-class="click-hover">
           <text class="key">用户等级</text>
           <view class="flex-1" />
+          <rate class="level" value="3" readonly void-icon="star" void-color="#eee" color="#e86c2f" size="{{15}}" />
           <image class="img-arrow" src="../../../images/icon_arrow.png" mode="widthFix" />
         </view>
         <view class="line margin-left-40 margin-right-40" />

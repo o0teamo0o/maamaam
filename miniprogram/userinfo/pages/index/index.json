@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "个人中心",
   "navigationBarBackgroundColor": "#FFFFFF",
-  "usingComponents": {}
+  "usingComponents": {
+    "rate": "../../../components/rate/index"
+  }
 }
