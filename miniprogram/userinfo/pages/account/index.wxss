@@ -1,0 +1,117 @@
+/* miniprogram/userinfo/pages/account/index.wxss */
+@import "../../../style/money.wxss";
+
+.userinfo-layout {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 20rpx 0;
+}
+
+.userinfo-layout>.img-sex {
+  width: 35rpx;
+  height: auto;
+  margin-right: 30rpx;
+  display: block;
+}
+
+.userinfo-layout>.name {
+  color: #333;
+  font-size: 32rpx;
+}
+
+.money-layout {
+  position: relative;
+}
+
+.money-layout>.img-bg {
+  width: 100vw;
+  height: auto;
+  display: block;
+}
+
+.money-layout>.text-layout {
+  width: 100vw;
+  left: 0;
+  top: 15rpx;
+  position: absolute;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.money-layout>.text-layout>.item-layout {
+  flex: 1;
+  padding-left: 40rpx;
+  color: white;
+}
+
+.money-layout>.text-layout>.item-layout>.key {
+  font-size: 24rpx;
+}
+
+.money-layout>.text-layout>.item-layout .value {
+  font-size: 60rpx;
+  font-weight: bold;
+  font-family: 'Corki';
+}
+
+.money-layout>.text-layout>.item-layout .mark {
+  vertical-align: top;
+  display: inline-block;
+  font-family: 'Corki';
+  font-size: 40rpx;
+}
+
+.btn-presentation {
+  width: 110vw;
+  height: 110rpx;
+  background-color: #f3dbce;
+  color: #a35f3a;
+  font-size: 34rpx;
+  display: flex;
+  font-weight: bold;
+  border-top: 1rpx solid #ddd;
+  align-content: center;
+  align-items: center;
+}
+
+.loading-layout {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.list-layout {
+  padding: 0 30rpx;
+}
+
+.list-layout>.item-layout {
+  display: flex;
+  align-content: center;
+  padding: 40rpx 0;
+  align-items: center;
+}
+
+.list-layout>.item-layout>.left-view {
+  flex: 1;
+}
+
+.list-layout>.item-layout>.left-view {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.list-layout>.item-layout>.left-view>.time {
+  font-size: 20rpx;
+  color: #666;
+}
+
+.list-layout>.item-layout>.right-view {
+  font-family: 'Corki';
+  font-size: 50rpx;
+  font-weight: bold;
+  text-align: right;
+}

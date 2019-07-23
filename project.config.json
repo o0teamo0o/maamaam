@@ -76,9 +76,17 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "用户信息",
+					"id": 6,
+					"name": "个人信息",
 					"pathName": "userinfo/pages/info/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "账户",
+					"pathName": "userinfo/pages/account/index",
+					"query": "",
 					"scene": null
 				}
 			]

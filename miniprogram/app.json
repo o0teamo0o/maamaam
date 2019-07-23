@@ -23,7 +23,8 @@
         "pages/index/index",
         "pages/integral/index",
         "pages/level/index",
-        "pages/info/index"
+        "pages/info/index",
+        "pages/account/index"
       ]
     }
   ],
