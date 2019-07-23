@@ -1,5 +1,9 @@
 /* miniprogram/userinfo/pages/level/index.wxss */
 
+page {
+  background-color: white;
+}
+
 .title-layout {
   background-color: #3dcd9c;
 }
@@ -81,4 +85,110 @@
   width: 70rpx;
   height: auto;
   display: block;
+}
+
+.down-arrow {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.down-arrow>image {
+  width: 30rpx;
+  height: auto;
+  display: block;
+}
+
+.hint-text-layout {
+  padding: 10rpx 40rpx;
+  color: #13ad79;
+  line-height: 50rpx;
+}
+
+.mark-layout {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding: 30rpx 40rpx;
+}
+
+.mark-layout>.mark-line {
+  flex: 1;
+  height: 1rpx;
+  border-top: 1rpx dashed #a3a3a3;
+}
+
+.mark-layout>text {
+  color: #c9c9c9;
+  font-size: 20rpx;
+}
+
+.task-item-layout {
+  box-sizing: border-box;
+  margin: 30rpx;
+  background-color: #f1f1f1;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding: 20rpx;
+  border-radius: 15rpx;
+}
+
+.task-item-layout>.icon {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.task-item-layout>.right-layout {
+  margin-left: 30rpx;
+}
+
+.task-item-layout>.right-layout>.title {
+  color: #333;
+  font-weight: bold;
+  width: 475rpx;
+  font-size: 34rpx;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.task-item-layout>.right-layout>.info {
+  width: 475rpx;
+  display: block;
+  color: #666;
+  font-size: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  margin: 8rpx 0;
+  white-space: nowrap;
+}
+
+.task-item-layout>.right-layout>.bottom-view {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.task-item-layout>.right-layout>.bottom-view>.partake {
+  background-color: #dc5e41;
+  line-height: 45rpx;
+  border-radius: 22rpx;
+  width: 160rpx;
+  font-size: 26rpx;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.task-item-layout>.right-layout>.bottom-view>.partake>.arrow {
+  width: 30rpx;
+  height: auto;
+  display: block;
+  margin: 0 5rpx;
 }

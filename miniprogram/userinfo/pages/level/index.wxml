@@ -28,6 +28,64 @@
           <image class="img-look-privilege" src="../../images/icon_look_privilege.png" mode="widthFix" />
         </view>
       </view>
+      <view class="down-arrow">
+        <view class="flex-1" />
+        <image src="../../images/icon_down_arrow.png" mode="widthFix" />
+        <view class="flex-1" />
+      </view>
+      <view class="hint-text-layout">
+        完成手机号码及实名认证，获得200以上积分，即可享受二星用户特权，再获得300积分即可成为三星用户
+      </view>
+      <view class="mark-layout">
+        <view class="mark-line" />
+        <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;下&nbsp;滑&nbsp;赚&nbsp;积&nbsp;分&nbsp;&nbsp;&nbsp;&nbsp;</text>
+        <view class="mark-line" />
+      </view>
+      <view class="task-item-layout">
+        <image class="icon" src="../../images/icon_task_list.png" mode="widthFix" />
+        <view class="right-layout">
+          <view class="title">报名参赛可活动300积分报名参赛可活动300积分</view>
+          <view class="info">得票或投票可活动积分得票或投票可活动积分</view>
+          <view class="bottom-view">
+            <view class="flex-1" />
+            <view class="partake">
+              <view class="flex-1" />
+              <text>立即参与</text>
+              <image class="arrow" src="../../images/icon_task_arrow.png" mode="widthFix" />
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="task-item-layout">
+        <image class="icon" src="../../images/icon_task_buy.png" mode="widthFix" />
+        <view class="right-layout">
+          <view class="title">报名参赛可活动300积分报名参赛可活动300积分</view>
+          <view class="info">得票或投票可活动积分得票或投票可活动积分</view>
+          <view class="bottom-view">
+            <view class="flex-1" />
+            <view class="partake">
+              <view class="flex-1" />
+              <text>立即参与</text>
+              <image class="arrow" src="../../images/icon_task_arrow.png" mode="widthFix" />
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="task-item-layout">
+        <image class="icon" src="../../images/icon_task_tasks.png" mode="widthFix" />
+        <view class="right-layout">
+          <view class="title">报名参赛可活动300积分报名参赛可活动300积分</view>
+          <view class="info">得票或投票可活动积分得票或投票可活动积分</view>
+          <view class="bottom-view">
+            <view class="flex-1" />
+            <view class="partake">
+              <view class="flex-1" />
+              <text>立即参与</text>
+              <image class="arrow" src="../../images/icon_task_arrow.png" mode="widthFix" />
+            </view>
+          </view>
+        </view>
+      </view>
     </view>
   </view>
 </view>
