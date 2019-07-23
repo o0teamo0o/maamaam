@@ -1,0 +1,7 @@
+<!--miniprogram/userinfo/pages/follow/index.wxml-->
+<view class='body'>
+  <view class="wrap flex flex-v">
+    <view class='main flex-1'>
+    </view>
+  </view>
+</view>
