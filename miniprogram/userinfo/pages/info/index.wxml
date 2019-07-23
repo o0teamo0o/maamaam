@@ -1,0 +1,93 @@
+<!--miniprogram/userinfo/pages/info/index.wxml-->
+
+<view class='body'>
+  <view class="wrap flex flex-v">
+    <view class='main flex-1'>
+      <view class="line" />
+      <view class="line margin-top-15" />
+      <view class="item-frame-layout">
+        <view class="item-layout" hover-class="click-hover">
+          <view class="mark" />
+          <text class="key">用户ID</text>
+          <view class="flex-1" />
+          <text class="value">MA.000000001</text>
+          <image class="img-arrow" src="../../../images/icon_arrow.png" mode="widthFix" />
+        </view>
+        <view class="line margin-left-40 margin-right-40" />
+        <view class="item-head-layout" hover-class="click-hover">
+          <view class="mark" />
+          <text class="key">头像</text>
+          <view class="flex-1" />
+          <image class="img-header" src="../../../images/icon_default_header.png" mode="widthFix" />
+          <image class="img-arrow" src="../../../images/icon_arrow.png" mode="widthFix" />
+        </view>
+        <view class="line margin-left-40 margin-right-40" />
+        <view class="item-layout" hover-class="click-hover">
+          <view class="mark" />
+          <text class="key">昵称</text>
+          <view class="flex-1" />
+          <text class="value">昵称</text>
+          <image class="img-arrow" src="../../../images/icon_arrow.png" mode="widthFix" />
+        </view>
+        <view class="line margin-left-40 margin-right-40" />
+        <view class="item-layout" hover-class="click-hover">
+          <view class="mark" />
+          <text class="key">姓名</text>
+          <view class="flex-1" />
+          <text class="value">姓名</text>
+          <image class="img-arrow" src="../../../images/icon_arrow.png" mode="widthFix" />
+        </view>
+        <view class="line margin-left-40 margin-right-40" />
+        <view class="item-layout" hover-class="click-hover">
+          <view class="mark" />
+          <text class="key">性别</text>
+          <view class="flex-1" />
+          <text class="value">性别</text>
+          <image class="img-arrow" src="../../../images/icon_arrow.png" mode="widthFix" />
+        </view>
+        <view class="line margin-left-40 margin-right-40" />
+        <view class="item-layout" hover-class="click-hover">
+          <view class="mark" />
+          <text class="key">出生日期</text>
+          <view class="flex-1" />
+          <text class="value">1999.03.02</text>
+          <image class="img-arrow" src="../../../images/icon_arrow.png" mode="widthFix" />
+        </view>
+        <view class="line margin-left-40 margin-right-40" />
+        <view class="item-layout" hover-class="click-hover">
+          <view class="mark" />
+          <text class="key">手机号码</text>
+          <view class="flex-1" />
+          <text class="value">138****8888</text>
+          <image class="img-arrow" src="../../../images/icon_arrow.png" mode="widthFix" />
+        </view>
+        <view class="line margin-left-40 margin-right-40" />
+        <view class="item-layout" hover-class="click-hover">
+          <view class="mark" />
+          <text class="key">身份证号码</text>
+          <view class="flex-1" />
+          <text class="value">430***********6621</text>
+          <image class="img-arrow" src="../../../images/icon_arrow.png" mode="widthFix" />
+        </view>
+        <view class="line margin-left-40 margin-right-40" />
+        <view class="item-layout" hover-class="click-hover">
+          <view class="mark" />
+          <text class="key">收件地址</text>
+          <view class="flex-1" />
+          <text class="value">地址地址地址地址地址地址地址地址地址地址地址地址地址</text>
+          <image class="img-arrow" src="../../../images/icon_arrow.png" mode="widthFix" />
+        </view>
+      </view>
+      <view class="line" />
+      <view class="line margin-top-15" />
+      <view class="bottom-layout">
+        <view class="top-text">尊敬的用户：</view>
+        <view class="empty" />
+        <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您好，根据《中华人民共和国网络安全法》（2017年6月1日 实施）及相关法律的规定，以及按工信部、通信管理局、公安等相关监管单位要求，用户不提供真实身份信息的，网络运营者不得为其提供相关服务。</text>
+        <view class="empty" />
+        <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请各用户在线提交真实身份信息材料完成实名认证。未完成实名认证要求的用户我司将停止用户对账户的管理权限，由此带来的损失，我司将不承担任何责任。我司程度对用户信息安全负责并承担相关责任。</text>
+      </view>
+      <view class="line" />
+    </view>
+  </view>
+</view>

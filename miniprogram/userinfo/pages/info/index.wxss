@@ -1,0 +1,85 @@
+/* miniprogram/userinfo/pages/info/index.wxss */
+
+.item-frame-layout {
+  background-color: white;
+}
+
+.item-frame-layout>.item-layout {
+  padding: 35rpx 40rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  color: #666;
+}
+
+.item-frame-layout>.item-layout>.mark {
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 50%;
+  background-color: #27a793;
+  margin-right: 20rpx;
+}
+
+.item-frame-layout>.item-layout>.key {
+  color: #333;
+  font-weight: bold;
+}
+
+.item-frame-layout>.item-layout>.value {
+  color: #666;
+  margin-right: 20rpx;
+  width: 340rpx;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.item-frame-layout>.item-head-layout {
+  padding: 10rpx 40rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  color: #666;
+}
+
+.item-frame-layout>.item-head-layout>.key {
+  color: #333;
+  font-weight: bold;
+}
+
+.item-frame-layout>.item-head-layout>.mark {
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 50%;
+  background-color: #27a793;
+  margin-right: 20rpx;
+}
+
+.item-frame-layout>.item-head-layout>.img-header {
+  width: 90rpx;
+  height: 90rpx;
+  display: block;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+
+.img-arrow {
+  width: 40rpx;
+  height: auto;
+  display: block;
+}
+
+.bottom-layout {
+  padding: 50rpx 40rpx;
+  color: #e28558;
+  background-color: white;
+}
+
+.bottom-layout>.empty {
+  height: 20rpx;
+}

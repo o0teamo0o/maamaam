@@ -22,7 +22,8 @@
       "pages": [
         "pages/index/index",
         "pages/integral/index",
-        "pages/level/index"
+        "pages/level/index",
+        "pages/info/index"
       ]
     }
   ],
