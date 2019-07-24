@@ -1,1 +1,118 @@
 /* miniprogram/userinfo/pages/follow/index.wxss */
+
+.content {
+  background-color: white;
+}
+
+.content>.head-layout {
+  margin: 0 30rpx;
+  background-color: #259674;
+  border-radius: 10rpx;
+  padding: 20rpx 30rpx;
+}
+
+.head-layout>.info-layout {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.head-layout>.info-layout>.img-header {
+  width: 200rpx;
+  height: 200rpx;
+  display: block;
+  border-radius: 50%;
+}
+
+.head-layout>.info-layout>.right-layout {
+  flex: 1;
+  margin-left: 30rpx;
+  color: white;
+}
+
+.head-layout>.info-layout>.right-layout>.name {
+  font-size: 34rpx;
+  margin-bottom: 12rpx;
+  width: 450rpx;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.head-layout>.money-layout {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  color: white;
+  padding: 30rpx 0;
+  font-size: 32rpx;
+}
+
+.head-layout>.money-layout>.left-layout {
+  flex: 1;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.head-layout>.money-layout>.middle-line {
+  width: 2rpx;
+  height: 40rpx;
+  background-color: white;
+  margin: 0 10rpx;
+}
+
+.head-layout>.money-layout>.right-layout {
+  flex: 1;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.item-frame-layout {
+  background-color: white;
+  margin-top: 30rpx;
+}
+
+.item-frame-layout>.item-layout {
+  padding: 35rpx 40rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  color: #666;
+}
+
+.item-frame-layout>.item-layout>.mark {
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 50%;
+  background-color: #27a793;
+  margin-right: 20rpx;
+}
+
+.item-frame-layout>.item-layout>.key {
+  color: #333;
+  font-weight: bold;
+}
+
+.item-frame-layout>.item-layout>.value {
+  color: #666;
+  margin-right: 20rpx;
+  width: 340rpx;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.img-arrow {
+  width: 40rpx;
+  height: auto;
+  display: block;
+}
