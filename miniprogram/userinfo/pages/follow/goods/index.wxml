@@ -1,4 +1,4 @@
-<!--miniprogram/userinfo/pages/follow/task/index.wxml-->
+<!--miniprogram/userinfo/pages/follow/goods/index.wxml-->
 <view class='body'>
   <view class="wrap flex flex-v">
     <view class='main flex-1'>
@@ -28,39 +28,47 @@
         </view>
       </view>
       <view class='integral-layout'>
-        <view wx:if="{{!integralData}}" class='loading-integral-layout' style="height:{{listHeight}}px">
+        <view wx:if="{{!tourProductList}}" class='loading-integral-layout' style="height:{{listHeight}}px">
           <view class="sk-three-bounce">
             <view class="sk-child sk-bounce1" />
             <view class="sk-child sk-bounce2" />
             <view class="sk-child sk-bounce3" />
           </view>
         </view>
-        <view wx:elif="{{integralData.length == 0}}" class='empty-integral-layout' style="height:{{listHeight}}px; line-height:{{listHeight}}px">
+        <view wx:elif="{{tourProductList.length == 0}}" class='empty-integral-layout' style="height:{{listHeight}}px; line-height:{{listHeight}}px">
           <view class='empty'>
             <image class='empty-icon' src='../../images/icon_empty_integral.png' mode='widthFix' />
-            <text class='empty-hint'>暂无关注的任务</text>
+            <text class='empty-hint'>暂无关注商品</text>
           </view>
         </view>
         <block wx:else>
-          <block wx:for="{{integralData}}" wx:key="forkey">
-            <view class='item-layout' hover-class='title-hover'>
-              <image class='icon' src='../../../../images/{{item.url}}' mode='widthFix' />
-              <view class='right-layout'>
-                <view class='top-view'>
-                  <view class="title">{{item.title}}</view>
+          <block wx:for="{{tourProductList}}" wx:key="forkey">
+            <view class='goods-item-layout'>
+              <image class='goods-img' src="{{item.recommendImageUrl}}" />
+              <view class="right-layout">
+                <view class="top-layout">
+                  <view class="top-left-view">
+                    <view class='title-layout'>
+                      <text wx:if="{{item.isActivity == '1'}}" class='big-title'>{{item.title}}</text>
+                      <text class='small-title'>{{item.stitle}}</text>
+                    </view>
+                    <view class='small-title'>{{item.remark}}</view>
+                  </view>
                   <image class='icon-delete' src="../../../images/icon_delete.png" mode='widthFix' />
                 </view>
-                <view class='bottom-view'>
-                  <view class='info'>
-                    <text>奖励积分:999分</text>
-                    <view class='middle-line' />
-                    <text>人数：9999/9999</text>
+                <view class="bottom-layout">
+                  <view class='left-view'>
+                    <button class='btn-recommend' open-type="share" data="{{item}}">推荐给好友</button>
+                    <text class='allowance'>剩余: {{item.productNumber}} 份</text>
                   </view>
-                  <view class='time'>2019.07.25 截止</view>
+                  <view class="right-layout">
+                    <view class='price-text'>{{item.activityAmount}}</view>
+                    <text class="mark">元 / 人</text>
+                  </view>
                 </view>
               </view>
             </view>
-            <view wx:if="{{index != integralData.length-1}}" class='line margin-left-60' />
+            <view wx:if="{{index != integralData.length-1}}" class='line margin-left-30 margin-right-30' />
           </block>
         </block>
       </view>
