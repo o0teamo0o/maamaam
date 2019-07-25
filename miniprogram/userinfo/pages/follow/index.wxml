@@ -7,7 +7,7 @@
           <view class="info-layout">
             <image class="img-header" src="../../../images/icon_default_header.png" mode="widthFix" />
             <view class="right-layout">
-              <view class="name">姓名姓名姓名姓名姓名姓名姓名姓名姓名</view>
+              <view class="name">昵称</view>
               <rate class="level" value="3" readonly void-icon="star" void-color="#64b49c" color="#FFFFFF" size="{{15}}" />
             </view>
           </view>

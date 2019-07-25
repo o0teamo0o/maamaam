@@ -25,7 +25,8 @@
         "pages/level/index",
         "pages/info/index",
         "pages/account/index",
-        "pages/follow/index"
+        "pages/follow/index",
+        "pages/follow/task/index"
       ]
     }
   ],
