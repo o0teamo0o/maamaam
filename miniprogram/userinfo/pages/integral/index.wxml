@@ -1,1 +1,57 @@
 <!--miniprogram/userinfo/pages/integral/index.wxml-->
+<view class='body'>
+  <view class="wrap flex flex-v">
+    <view class='main flex-1'>
+      <view class="line" />
+      <view class="userinfo-layout">
+        <view class="flex-1" />
+        <image class="img-sex" src="../../../images/icon_sex_female.png" mode="widthFix" />
+        <text class="name">名称</text>
+        <view class="flex-1" />
+      </view>
+      <view class="money-layout">
+        <image class="img-bg" src="../../images/bg_integral_money.png" mode="widthFix" />
+        <view class="text-layout">
+          <view class="item-layout">
+            <view class="key">账户余额（元）</view>
+            <view>
+              <text class="mark">￥</text>
+              <text class="value">25.00</text>
+            </view>
+          </view>
+          <view class="item-layout">
+            <view class="key">积分</view>
+            <view class="value">1526</view>
+          </view>
+        </view>
+      </view>
+      <view class="line mark1" />
+      <view class="loading-layout" wx:if="{{!listData}}" style="height:{{listHeight}}px">
+        <view class="sk-three-bounce">
+          <view class="sk-child sk-bounce1" />
+          <view class="sk-child sk-bounce2" />
+          <view class="sk-child sk-bounce3" />
+        </view>
+      </view>
+      <block wx:else>
+        <block wx:for="{{listData}}" wx:key="{{forkey}}">
+          <view class="list-layout">
+            <view class="item-layout">
+              <view class="left-view">
+                <view class="key">获得红包</view>
+                <view class="time">2016.03.12 12:11:42</view>
+              </view>
+              <view class="right-view">+0.05</view>
+            </view>
+            <view class="dashed-line" />
+          </view>
+        </block>
+      </block>
+    </view>
+    <view class="btn-presentation mark2">
+      <view class="flex-1" />
+      <text>我要提现</text>
+      <view class="flex-1" />
+    </view>
+  </view>
+</view>
