@@ -44,7 +44,12 @@
         <block wx:else>
           <block wx:for="{{ticketList}}" wx:key="forkey">
             <view class='ticket-item-layout'>
-
+              <view class="mark" />
+              <text>用户昵称</text>
+              <image src="../../../images/icon_ticket123" mode='widthFix' />
+              <view class="right-layout">
+                <image></image>
+              </view>
             </view>
             <view wx:if="{{index != integralData.length-1}}" class='line margin-left-30 margin-right-30' />
           </block>

@@ -122,3 +122,18 @@
 .empty-integral-layout > .empty > .empty-hint {
   color: #cdcdcd;
 }
+
+.ticket-item-layout {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding: 60rpx 30rpx;
+}
+
+.ticket-item-layout>.mark {
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 50%;
+  background-color: #27a793;
+  margin-right: 20rpx;
+}
