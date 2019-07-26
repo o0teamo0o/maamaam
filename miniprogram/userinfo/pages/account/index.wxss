@@ -21,6 +21,29 @@
   font-size: 32rpx;
 }
 
+.empty-integral-layout {
+  text-align: center;
+}
+
+.empty-integral-layout > .empty {
+  width: 310rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 25%;
+}
+
+.empty-integral-layout > .empty > .empty-icon {
+  width: 120rpx;
+  height: auto;
+  display: block;
+}
+
+.empty-integral-layout > .empty > .empty-hint {
+  color: #cdcdcd;
+}
+
 .money-layout {
   position: relative;
 }

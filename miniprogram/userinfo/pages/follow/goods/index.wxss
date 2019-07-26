@@ -77,6 +77,29 @@
   background-color: white;
 }
 
+.empty-integral-layout {
+  text-align: center;
+}
+
+.empty-integral-layout > .empty {
+  width: 330rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 25%;
+}
+
+.empty-integral-layout > .empty > .empty-icon {
+  width: 150rpx;
+  height: auto;
+  display: block;
+}
+
+.empty-integral-layout > .empty > .empty-hint {
+  color: #cdcdcd;
+}
+
 .integral-layout>.goods-item-layout {
   padding: 40rpx 30rpx;
   display: flex;

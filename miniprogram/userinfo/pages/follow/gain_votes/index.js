@@ -1,4 +1,4 @@
-// miniprogram/userinfo/pages/follow/task/index.js
+// miniprogram/userinfo/pages/follow/gain_votes/index.js
 const app = getApp()
 var utils = require('../../../../libs/util.js');
 
@@ -8,20 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    integralData: [{
-      "url": "icon_integral_questionnaire.png",
-      "title": "【系统】用户爱好兴趣问卷【系统】用户爱好兴趣问卷",
-      "star": 3,
-    }, {
-      "url": "icon_integral_package.png",
-      "title": "免费领取限量保险大礼包",
-      "star": 2,
-    }, {
-      "url": "icon_integral_public.png",
-      "title": "关注“慢漫陪着你”公众号",
-      "star": 2,
-    }],
-    integralData: []
+    ticketList: ["1", "1", "1", "1", "1", "1"]
   },
 
   /**
@@ -41,8 +28,6 @@ Page({
     queryMark1.select(".content").boundingClientRect()
     queryMark1.exec(function(res) {
       if (!utils.isEmpty(res)) {
-        console.error(res)
-
         var scrollHeight = wx.getSystemInfoSync().windowHeight;
 
         var listHeight = scrollHeight - res[0].height;

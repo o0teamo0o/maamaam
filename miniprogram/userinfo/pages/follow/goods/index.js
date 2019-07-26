@@ -145,6 +145,7 @@ Page({
       "ticketCount": 1,
       "title": "出游 / ",
     }], //商品信息,
+    tourProductList: []
   },
 
   /**

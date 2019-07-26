@@ -1,4 +1,5 @@
-/* miniprogram/userinfo/pages/follow/task/index.wxss */
+/* miniprogram/userinfo/pages/follow/gain_votes/index.wxss */
+@import "../../../../style/money.wxss";
 
 .content {
   background-color: white;
@@ -72,14 +73,31 @@
   align-items: center;
 }
 
-.integral-layout {
-  background-color: white;
+.empty-integral-layout {
+  text-align: center;
 }
 
-.integral-layout > .loading-integral-layout {
+.empty-integral-layout > .empty {
+  width: 330rpx;
   display: flex;
   align-content: center;
   align-items: center;
+  text-align: center;
+  margin-left: 25%;
+}
+
+.empty-integral-layout > .empty > .empty-icon {
+  width: 150rpx;
+  height: auto;
+  display: block;
+}
+
+.empty-integral-layout > .empty > .empty-hint {
+  color: #cdcdcd;
+}
+
+.integral-layout {
+  background-color: white;
 }
 
 .empty-integral-layout {
@@ -96,84 +114,11 @@
 }
 
 .empty-integral-layout > .empty > .empty-icon {
-  width: 120rpx;
+  width: 150rpx;
   height: auto;
   display: block;
 }
 
 .empty-integral-layout > .empty > .empty-hint {
   color: #cdcdcd;
-}
-
-.integral-layout > .item-layout {
-  display: flex;
-  align-content: center;
-  align-items: center;
-  padding: 50rpx 50rpx;
-}
-
-.integral-layout > .item-layout .icon {
-  width: 70rpx;
-  height: auto;
-  display: block;
-}
-
-.integral-layout > .item-layout > .right-layout {
-  display: flex;
-  flex-direction: column;
-  margin-left: 30rpx;
-}
-
-.integral-layout > .item-layout > .right-layout > .top-view {
-  flex: 1;
-  display: flex;
-  align-content: center;
-  align-items: center;
-}
-
-.integral-layout > .item-layout > .right-layout > .top-view > .title {
-  font-weight: bold;
-  font-size: 32rpx;
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-right: 15rpx;
-  width: 505rpx;
-}
-
-.integral-layout > .item-layout > .right-layout > .top-view > .icon-delete {
-  width: 50rpx;
-  height: auto;
-  display: block;
-}
-
-.integral-layout > .item-layout > .right-layout > .bottom-view {
-  flex: 1;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  margin-top: 8rpx;
-  font-size: 24rpx;
-}
-
-.integral-layout > .item-layout > .right-layout > .bottom-view > .info {
-  color: #888;
-  width: 415rpx;
-}
-
-.integral-layout > .item-layout > .right-layout > .bottom-view > .info > .middle-line {
-  background-color: #e4681d;
-  display: inline-block;
-  width: 2rpx;
-  height: 30rpx;
-  margin: 0 15rpx;
-  vertical-align: middle;
-}
-
-.integral-layout > .item-layout > .right-layout > .bottom-view > .time {
-  text-align: right;
-  max-width: 190rpx;
-  font-size: 20rpx;
-  color: #e4681d;
 }

@@ -8,7 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    listData: ["1", "2", "1", "2", "1", "2", "1", "2", "1", "2", "1", "2",]
+    listData: ["1", "2", "1", "2", "1", "2", "1", "2", "1", "2", "1", "2",],
+    listData: []
   },
 
   /**
@@ -28,8 +29,6 @@ Page({
     queryMark1.select(".mark1").boundingClientRect()
     queryMark1.exec(function(res) {
       if (!utils.isEmpty(res)) {
-        console.error(res)
-
         var queryMark2 = wx.createSelectorQuery();
         queryMark2.select(".mark2").boundingClientRect()
         queryMark2.exec(function (result) {

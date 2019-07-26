@@ -27,6 +27,7 @@ Page({
       "title": "关注“慢漫陪着你”公众号",
       "star": 2,
     }],
+    // integralData: [],
     tourProductList: [{
       "activityAmount": 399,
       "activityEndDate": "2019-07-31",

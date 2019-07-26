@@ -1,6 +1,10 @@
 /* miniprogram/userinfo/pages/integral/index.wxss */
 @import "../../../style/money.wxss";
 
+page {
+  background-color: white;
+}
+
 .userinfo-layout {
   display: flex;
   align-content: center;
@@ -84,6 +88,29 @@
 
 .list-layout {
   padding: 0 30rpx;
+}
+
+.empty-integral-layout {
+  text-align: center;
+}
+
+.empty-integral-layout > .empty {
+  width: 310rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 25%;
+}
+
+.empty-integral-layout > .empty > .empty-icon {
+  width: 120rpx;
+  height: auto;
+  display: block;
+}
+
+.empty-integral-layout > .empty > .empty-hint {
+  color: #cdcdcd;
 }
 
 .list-layout>.item-layout {

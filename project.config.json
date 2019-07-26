@@ -32,7 +32,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 10,
+			"current": 11,
 			"list": [
 				{
 					"id": -1,
@@ -107,6 +107,13 @@
 					"id": -1,
 					"name": "关注的商品",
 					"pathName": "userinfo/pages/follow/goods/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的得票",
+					"pathName": "userinfo/pages/follow/gain_votes/index",
 					"scene": null
 				}
 			]
