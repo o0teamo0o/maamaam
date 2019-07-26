@@ -60,7 +60,6 @@
 .money-layout>.text-layout>.item-layout .mark {
   vertical-align: top;
   display: inline-block;
-  font-family: 'Corki';
   font-size: 40rpx;
 }
 
