@@ -29,7 +29,8 @@
         "pages/follow/task/index",
         "pages/follow/goods/index",
         "pages/follow/gain_votes/index",
-        "pages/follow/vote/index"
+        "pages/follow/vote/index",
+        "pages/follow/order/index"
       ]
     }
   ],

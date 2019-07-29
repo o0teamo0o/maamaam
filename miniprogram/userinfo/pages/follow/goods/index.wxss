@@ -76,6 +76,11 @@
 .integral-layout {
   background-color: white;
 }
+.integral-layout > .loading-integral-layout {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
 
 .empty-integral-layout {
   text-align: center;

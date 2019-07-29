@@ -1,0 +1,103 @@
+<!--miniprogram/userinfo/pages/follow/order/index.wxml-->
+<view class="container">
+  <view class="head-layout">
+    <view class="info-layout">
+      <image class="img-header" src="../../../../images/icon_default_header.png" mode="widthFix" />
+      <view class="right-layout">
+        <view class="name">昵称</view>
+        <rate class="level" value="3" readonly void-icon="star" void-color="#64b49c" color="#FFFFFF" size="{{15}}" />
+      </view>
+    </view>
+    <view class="dashed-line" />
+    <view class="money-layout">
+      <view class="left-layout">
+        <view class="flex-1" />
+        <text>账户余额:￥999.00</text>
+        <view class="flex-1" />
+      </view>
+      <view class="middle-line" />
+      <view class="right-layout">
+        <view class="flex-1" />
+        <text>积分:99999</text>
+        <view class="flex-1" />
+      </view>
+    </view>
+  </view>
+  <view class="tab-layout">
+    <view class="item-layout" hover-class="click-hover">
+      <view class="mark">
+        <text>99</text>
+      </view>
+      <image class="icon" src="../../../images/icon_order_payment.png" mode="widthFix" />
+      <text class="text">代付款</text>
+    </view>
+    <view class="item-layout" hover-class="click-hover">
+      <view class="mark">
+        <text>99</text>
+      </view>
+      <image class="icon" src="../../../images/icon_order_receiving_goods.png" mode="widthFix" />
+      <text class="text">代收货</text>
+    </view>
+    <view class="item-layout" hover-class="click-hover">
+      <view class="mark">
+        <text>99</text>
+      </view>
+      <image class="icon" src="../../../images/icon_order_evaluate.png" mode="widthFix" />
+      <text class="text">代评价</text>
+    </view>
+    <view class="item-layout" hover-class="click-hover">
+      <view class="mark">
+        <text>99</text>
+      </view>
+      <image class="icon" src="../../../images/icon_order_after_sale.png" mode="widthFix" />
+      <text class="text">退货/售后</text>
+    </view>
+  </view>
+  <view class='order-line' />
+  <view id="idMark" />
+  <view class='integral-layout'>
+    <view wx:if="{{!tourProductList}}" class='loading-integral-layout' style="height:{{listHeight}}px; line-height:{{listHeight}}px">
+      <view class="sk-three-bounce">
+        <view class="sk-child sk-bounce1" />
+        <view class="sk-child sk-bounce2" />
+        <view class="sk-child sk-bounce3" />
+      </view>
+    </view>
+    <view wx:elif="{{tourProductList.length == 0}}" class='empty-integral-layout' style="height:{{listHeight}}px; line-height:{{listHeight}}px">
+      <view class='empty'>
+        <image class='empty-icon' src='../../../images/icon_empty_goods.png' mode='widthFix' />
+        <text class='empty-hint'>暂无关注商品</text>
+      </view>
+    </view>
+    <block wx:else>
+      <block wx:for="{{tourProductList}}" wx:key="forkey">
+        <view class='goods-item-layout'>
+          <image class='goods-img' src="{{item.recommendImageUrl}}" />
+          <view class="right-layout">
+            <view class="top-layout">
+              <view class="top-left-view">
+                <view class='title-layout'>
+                  <text wx:if="{{item.isActivity == '1'}}" class='big-title'>{{item.title}}</text>
+                  <text class='small-title'>{{item.stitle}}</text>
+                </view>
+                <view class='small-title'>{{item.remark}}</view>
+              </view>
+              <image class='icon-delete' src="../../../images/icon_delete.png" mode='widthFix' />
+            </view>
+            <view class="bottom-layout">
+              <view class='left-view'>
+                <button class='btn-recommend' open-type="share" data="{{item}}">推荐给好友</button>
+                <text class='allowance'>剩余: {{item.productNumber}} 份</text>
+              </view>
+              <view class="right-layout">
+                <view class='price-text'>{{item.activityAmount}}</view>
+                <text class="mark">元 / 人</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view wx:if="{{index != integralData.length-1}}" class='line margin-left-30 margin-right-30' />
+      </block>
+    </block>
+  </view>
+</view>

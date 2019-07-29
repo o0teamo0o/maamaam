@@ -365,7 +365,7 @@ page {
 }
 
 .sk-three-bounce {
-  margin: 40rpx auto;
+  margin: 0 auto;
   width: 150rpx;
   text-align: center;
 }
