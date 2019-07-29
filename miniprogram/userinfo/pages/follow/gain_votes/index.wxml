@@ -45,10 +45,11 @@
           <block wx:for="{{ticketList}}" wx:key="forkey">
             <view class='ticket-item-layout'>
               <view class="mark" />
-              <text>用户昵称</text>
-              <image src="../../../images/icon_ticket123" mode='widthFix' />
+              <text class="name">用户昵称用户昵称用户昵称用户昵称</text>
+              <image class="ticket" src="../../../images/icon_ticket123.png" mode='widthFix' />
               <view class="right-layout">
-                <image></image>
+                <view class="day">2019.09.09</view>
+                <view class="time">15:12:14</view>
               </view>
             </view>
             <view wx:if="{{index != integralData.length-1}}" class='line margin-left-30 margin-right-30' />

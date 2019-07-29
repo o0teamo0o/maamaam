@@ -127,7 +127,7 @@
   display: flex;
   align-content: center;
   align-items: center;
-  padding: 60rpx 30rpx;
+  padding: 50rpx 30rpx 0;
 }
 
 .ticket-item-layout>.mark {
@@ -136,4 +136,35 @@
   border-radius: 50%;
   background-color: #27a793;
   margin-right: 20rpx;
+}
+
+.ticket-item-layout>.name {
+  width: 180rpx;
+  overflow: hidden;
+  color: #333;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ticket-item-layout>.ticket {
+  width: 250rpx;
+  height: auto;
+  display: block;
+  margin: 0 30rpx;
+}
+
+.ticket-item-layout>.right-layout {
+  text-align: right;
+  flex: 1;
+}
+
+.ticket-item-layout>.right-layout>.day {
+  color: #333;
+}
+
+.ticket-item-layout>.right-layout>.time {
+  font-size: 28rpx;
+  color: #666;
 }
