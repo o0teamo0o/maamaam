@@ -1,0 +1,60 @@
+<!--miniprogram/userinfo/pages/follow/vote/index.wxml-->
+<view class='body'>
+  <view class="wrap flex flex-v">
+    <view class='main flex-1'>
+      <view class="content">
+        <view class="head-layout">
+          <view class="info-layout">
+            <image class="img-header" src="../../../../images/icon_default_header.png" mode="widthFix" />
+            <view class="right-layout">
+              <view class="name">昵称</view>
+              <rate class="level" value="3" readonly void-icon="star" void-color="#64b49c" color="#FFFFFF" size="{{15}}" />
+            </view>
+          </view>
+          <view class="dashed-line" />
+          <view class="money-layout">
+            <view class="left-layout">
+              <view class="flex-1" />
+              <text>账户余额:￥999.00</text>
+              <view class="flex-1" />
+            </view>
+            <view class="middle-line" />
+            <view class="right-layout">
+              <view class="flex-1" />
+              <text>积分:99999</text>
+              <view class="flex-1" />
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='integral-layout'>
+        <view wx:if="{{!ticketList}}" class='loading-integral-layout' style="height:{{listHeight}}px; line-height:{{listHeight}}px">
+          <view class="sk-three-bounce">
+            <view class="sk-child sk-bounce1" />
+            <view class="sk-child sk-bounce2" />
+            <view class="sk-child sk-bounce3" />
+          </view>
+        </view>
+        <view wx:elif="{{ticketList.length == 0}}" class='empty-integral-layout' style="height:{{listHeight}}px; line-height:{{listHeight}}px">
+          <view class='empty'>
+            <image class='empty-icon' src='../../../images/icon_empty_ticket.png' mode='widthFix' />
+            <text class='empty-hint'>暂无我的得票</text>
+          </view>
+        </view>
+        <block wx:else>
+          <block wx:for="{{ticketList}}" wx:key="forkey">
+            <view class='ticket-item-layout'>
+              <view class="left-layout">
+                <view class="day">2019.09.09</view>
+                <view class="time">15:12:14</view>
+              </view>
+              <text class="name">用户昵称用户昵称用户昵称用户昵称</text>
+              <image class="ticket" src="../../../images/icon_ticket123.png" mode='widthFix' />
+            </view>
+            <view wx:if="{{index != integralData.length-1}}" class='line margin-left-30 margin-right-30' />
+          </block>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
