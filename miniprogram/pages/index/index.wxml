@@ -6,20 +6,22 @@
       <view class='nav-title'>慢漫悠享</view>
     </view>
     <view class='user-layout'>
-      <image class='img-head' src='../../images/icon_default_header.png' mode='widthFix' />
+      <image class='img-head' wx:if="{{userInfo.headImgUrl}}" src='{{userInfo.headImgUrl}}' mode='widthFix' />
+      <image wx:else class='img-head' src='../../images/icon_default_header.png' mode='widthFix' />
       <view class='data-layout'>
         <view class='top-view'>
-          <view class='nick'>用户昵称</view>
+          <view wx:if="{{userInfo.wechatName}}" class='nick'>{{userInfo.wechatName}}</view>
+          <view wx:else class='nick'>慢·漫会员</view>
           <image class='email' src='../../images/icon_email_full.jpg' mode='widthFix' />
         </view>
         <view class='middle-line' />
         <view class='bottom-view'>
           <text decode='true'>等&nbsp;级：</text>
-          <rate value="3" readonly void-icon="star" void-color="#eee" color="#e86c2f" size="{{15}}" />
+          <rate value="0" readonly void-icon="star" void-color="#eee" color="#e86c2f" size="{{15}}" />
           <view class='middle-line' />
           <view class='right'>
             <text decode='true'>积&nbsp;分：</text>
-            <text>88888</text>
+            <text>0</text>
           </view>
         </view>
       </view>
