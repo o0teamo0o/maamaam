@@ -1,0 +1,75 @@
+<!--miniprogram/userinfo/pages/interest/index.wxml-->
+<view class="container">
+  <view class='title-layout' style='height: {{myTopHeight}}px'>
+    <image class='title-bg' src='../../../images/bg_navigationbar.png' mode='widthFix' />
+    <view class='nav' style='height:{{navHeight}}px'>
+      <image wx:if="{{isBack}}" src='../../../images/btn_back_white.png' mode='aspectFit' class='back' bindtap='onBack' />
+      <view class='nav-title color-white'>我的兴趣</view>
+    </view>
+  </view>
+  <toast id="notify" />
+  <scroll-view class='overflow bg-white' style='height:calc(100vh - {{myTopHeight}}px)' scroll-y>
+
+    <view wx:if="{{isLoadData}}" class='loading-layout' style='height:calc(100vh - {{myTopHeight}}px)'>
+      <view class="sk-three-bounce">
+        <view class="sk-child sk-bounce1"></view>
+        <view class="sk-child sk-bounce2"></view>
+        <view class="sk-child sk-bounce3"></view>
+      </view>
+    </view>
+
+    <view wx:elif="{{noData}}" class='empty-layout' style='height:calc(100vh - {{myTopHeight}}px)' catchtap='loadIntersetInfo'>
+      <view class='empty-view'>
+        <image src='../../../images/icon_empty.png' />
+        <view>暂无数据</view>
+      </view>
+    </view>
+
+    <view wx:elif="{{isNetError}}" class='error-layout' style='height:calc(100vh - {{myTopHeight}}px)' catchtap='loadIntersetInfo'>
+      <view class='error-view'>
+        <image src='../../../images/icon_net_error.png' />
+        <view>网络异常,请轻点重试!</view>
+      </view>
+    </view>
+
+    <view wx:else>
+      <view class='mark'>点击图片勾选您的兴趣爱好,可多选</view>
+      <view class='interset-layout'>
+        <view class='item-layout' wx:for="{{interestArr}}" wx:key="forkey" catchtap='onCheckedListener' data-index='{{index}}'>
+          <image src='{{item.imagesUrl}}' />
+          <view wx:if="{{item.isChecked}}" class='item-selected'>
+            <image src='../../../images/icon_interest_selected.png' />
+          </view>
+          <view>{{item.name}}</view>
+        </view>
+      </view>
+      <view class='clear' />
+      <view class='fill-layout'>
+        <view wx:if="{{isEdit}}">
+          <van-button wx:if="{{isSubmit}}" custom-class='btn-submit-selected' disabled="true">确 定</van-button>
+          <van-button wx:else custom-class="btn-submit" disabled="true">确 定</van-button>
+        </view>
+        <view wx:else>
+          <van-button wx:if="{{isSubmit}}" custom-class='btn-submit-selected' disabled="true">确 定</van-button>
+          <van-button wx:else custom-class="btn-submit" disabled="true">确 定</van-button>
+        </view>
+        <view class='empty' />
+      </view>
+    </view>
+  </scroll-view>
+  <view class='bottom-layout'>
+    <view wx:if="{{isEdit}}">
+      <van-button wx:if="{{isSubmit}}" custom-class='btn-submit-selected' catchtap='onSubmitChange'>确 定</van-button>
+      <van-button wx:else custom-class="btn-submit" catchtap='onInterestSubmit'>确 定</van-button>
+    </view>
+    <view wx:else>
+      <van-button wx:if="{{isSubmit}}" custom-class='btn-submit-selected' open-type="getUserInfo" bindgetuserinfo="getUserData">确 定</van-button>
+      <van-button wx:else custom-class="btn-submit" catchtap='onInterestSubmit'>确 定</van-button>
+    </view>
+    <view class='empty' />
+  </view>
+</view>
+
+<!-- 引入图片预加载组件 -->
+<import src="../../../components/img-loader/img-loader.wxml" />
+<template is="img-loader" data="{{ imgLoadList }}"></template>

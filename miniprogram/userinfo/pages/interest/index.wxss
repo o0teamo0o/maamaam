@@ -1,0 +1,119 @@
+/* miniprogram/userinfo/pages/interest/index.wxss */
+
+.mark {
+  font-size: 28rpx;
+  text-align: center;
+  padding: 30rpx 0;
+}
+
+.interset-layout {
+  padding: 0 10vw;
+}
+
+.interset-layout .item-layout {
+  width: 20vw;
+  margin: 0 0 30rpx;
+  font-size: 30rpx;
+  position: relative;
+  float: left;
+  text-align: center;
+}
+
+.interset-layout .item-layout image {
+  width: 13vw;
+  height: 13vw;
+  border-radius: 100%;
+  animation: fadeIn 1s both;
+}
+
+.interset-layout .item-layout .item-selected {
+  width: 13vw;
+  height: 13vw;
+  position: absolute;
+  top: 0;
+  margin-left: 3.5vw;
+  border-radius: 100%;
+  background-color: rgba(98, 188, 75, 0.5);
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.interset-layout .item-layout .item-selected image {
+  width: 40rpx;
+  height: 40rpx;
+  margin: auto;
+}
+
+.interset-layout .item-layout view {
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.bottom-layout {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  bottom: 0;
+  background-color: white;
+}
+
+.bottom-layout .btn-submit {
+  height: 100rpx;
+  text-align: center;
+  background-color: #55cac2;
+  color: white;
+  line-height: 100rpx;
+  display: block;
+  border-radius: 7rpx;
+  border: none;
+  font-size: 34rpx;
+  margin: 40rpx 100rpx 30rpx;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 15rpx;
+}
+
+.fill-layout .btn-submit {
+  height: 100rpx;
+  text-align: center;
+  background-color: white;
+  color: white;
+  line-height: 100rpx;
+  display: block;
+  border-radius: 7rpx;
+  border: none;
+  font-size: 34rpx;
+  margin: 40rpx 100rpx 30rpx;
+  box-shadow: rgba(255, 255, 255, 0) 0 0 15rpx;
+}
+
+.bottom-layout .btn-submit-selected {
+  height: 100rpx;
+  text-align: center;
+  background-color: #75b65c;
+  color: white;
+  line-height: 100rpx;
+  border: none;
+  display: block;
+  border-radius: 7rpx;
+  font-size: 34rpx;
+  margin: 40rpx 100rpx 30rpx;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 15rpx;
+}
+
+.fill-layout .btn-submit-selected {
+  height: 100rpx;
+  text-align: center;
+  background-color: white;
+  color: white;
+  line-height: 100rpx;
+  border: none;
+  display: block;
+  border-radius: 7rpx;
+  font-size: 34rpx;
+  margin: 40rpx 100rpx 30rpx;
+  box-shadow: rgba(255, 255, 255, 0) 0 0 15rpx;
+}
+
+.empty {
+  height: 30rpx;
+}

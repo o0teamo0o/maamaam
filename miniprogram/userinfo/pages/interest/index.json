@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "van-button": "../../../components/button/index",
+    "toast": "../../../components/notify/index"
+  }
+}
