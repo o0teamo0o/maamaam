@@ -1,0 +1,6 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "toast": "../../../components/notify/index"
+  }
+}

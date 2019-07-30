@@ -1,0 +1,370 @@
+<!--miniprogram/product/pages/fh_list/index.wxml-->
+<view class='body'>
+  <view class="wrap flex flex-v">
+    <view class='main flex-1'>
+      <view class='list-top-layout'>
+        <view class='title-layout' style='height:{{navHeight}}px'>
+          <view class='bg' style='height:{{navHeight}}px' />
+          <view class='nav' style='height:{{navHeight}}px'>
+            <image src='../../../images/btn_back_black.png' mode='aspectFit' class='back' bindtap='onBack' />
+            <view class='nav-title'>芳华榜</view>
+          </view>
+        </view>
+        <toast id="notify" />
+        <view class='top-layout'>
+          <image class='bg' src='../../images/bg_signup_top.jpg' mode='widthFix' bindload='onLoadListTopImgHeight' />
+        </view>
+
+        <view class='bottom-layout'>
+          <text class='left-item' decode catchtap='jumpPrizePage'>&lt;&lt; 奖项设置</text>
+          <view class='middle-line' />
+          <text class='right-item' decode catchtap='jumpMatchPage'>我要报名 &gt;&gt;</text>
+        </view>
+      </view>
+      <view class='list-content' style='height: {{listContentHeight}}px'>
+        <view class='border-layout'>
+          <view class='tab-layout'>
+            <view class='item-layout' catchtap='onSelectedListTab' data-index='0'>
+              <image src='../../images/icon_list-newest.png' />
+              <text class="{{listTabIndex == '0' ? 'select-text' : ''}}">最新上传</text>
+            </view>
+            <view class='middle-line' />
+            <view class='item-layout' catchtap='onSelectedListTab' data-index='1'>
+              <image src='../../images/icon_list_same_month.png' />
+              <text class="{{listTabIndex == '1' ? 'select-text' : ''}}">当月排行</text>
+            </view>
+            <view class='middle-line' />
+            <view class='item-layout' catchtap='onSelectedListTab' data-index='2'>
+              <image src='../../images/icon_list_total.png' />
+              <text class="{{listTabIndex == '2' ? 'select-text' : ''}}">总排行</text>
+            </view>
+          </view>
+
+          <scroll-view wx:if="{{listTabIndex == '0'}}" scroll-y="true" class='list-scroll-layout' style='height: {{scrollHeight}}px'>
+            <view wx:if="{{isNewestLoadData}}" class='loading-layout' style='height: {{scrollHeight}}px'>
+              <view class="sk-three-bounce">
+                <view class="sk-child sk-bounce1"></view>
+                <view class="sk-child sk-bounce2"></view>
+                <view class="sk-child sk-bounce3"></view>
+              </view>
+            </view>
+            <view wx:elif="{{newestNoData}}" class='empty-layout' style='height: {{emptyHeight}}px' catchtap='onloadOrderData'>
+              <view class='empty-view'>
+                <image src='../../images/icon_empty.png' />
+                <view>暂无数据</view>
+              </view>
+            </view>
+
+            <view wx:elif="{{isNewestNetError}}" class='error-layout' style='height: {{emptyHeight}}px' catchtap='onloadOrderData'>
+              <view class='error-view'>
+                <image src='../../images/icon_net_error.png' />
+                <view>网络异常,请轻点重试!</view>
+              </view>
+            </view>
+
+            <view wx:else>
+              <view class='list-layout'>
+                <block wx:for="{{newestList}}" wx:key="forkey">
+                  <view class='line margin-left-15 margin-right-15' />
+                  <view class='item-layout' catchtap='jumpVotePage' data-fhuaid='{{item.id}}'>
+                    <view class='left-layout'>
+                      <!-- <view class='mark-layout'>
+                          <image wx:if="{{item.rankingStatus == '1'}}" class='arrow-img' src='../../images/icon_list_up.png' />
+                          <image wx:elif="{{item.rankingStatus == '2'}}" class='arrow-img' src='../../images/icon_list_down.png' />
+                          <image wx:else class='arrow-img' />
+                          <view class='ranking-layout'>
+                            <image src='../../images/icon_list_ranking.png' mode='widthFix' />
+                            <text>{{item.ranking}}</text>
+                          </view>
+                        </view> -->
+                      <view class='title-layout'>
+                        <text class='nick'>{{item.wechatName}}</text>
+                        <image src="../../images/{{item.sex == '1' ? 'icon_sex_male': 'icon_sex_female'}}.png" />
+                        <text wx:if="{{item.birthday}}" class='mark'>/</text>
+                        <text wx:if="{{item.birthday}}" class='age'>{{item.age}}岁</text>
+                      </view>
+                      <view class='line' />
+                      <text wx:if="{{item.introduce}}" class='introduce-layout'>{{item.introduce}}</text>
+                      <text wx:else class='introduce-layout' />
+                      <view wx:if="{{item.community}}" class='address'>
+                        <text>{{item.community}}</text>
+                        <image src='../../images/icon_list_address.png' />
+                      </view>
+                      <view wx:elif="{{item.street}}" class='address'>
+                        <text>{{item.street}}</text>
+                        <image src='../../images/icon_list_address.png' />
+                      </view>
+                      <view wx:elif="{{item.country}}" class='address'>
+                        <text>{{item.country}}</text>
+                        <image src='../../images/icon_list_address.png' />
+                      </view>
+                      <view wx:elif="{{item.city}}" class='address'>
+                        <text>{{item.city}}</text>
+                        <image src='../../images/icon_list_address.png' />
+                      </view>
+                      <view wx:elif="{{item.province}}" class='address'>
+                        <text>{{item.province}}</text>
+                        <image src='../../images/icon_list_address.png' />
+                      </view>
+                      <view wx:else class='address' />
+                      <view class='btn-layout' catchtap='onPlayIntroduce' data-src='{{item.matchVoice}}' data-index='{{index}}' data-type='0'>
+                        <view wx:if="{{item.matchVoice}}" class='left-btn'>
+                          <view class='empty' />
+                          <image wx:if="{{item.isPlaying}}" src='../../images/icon_playing.gif' />
+                          <image wx:else src='../../images/icon_play.png' />
+                          <text>个人介绍</text>
+                          <view class='empty' />
+                        </view>
+                        <view wx:else class='empty-btn' />
+                        <view wx:if="{{item.couponStatus == '0'}}" class='right-can-btn' catchtap='onShowVotePopup' data-voteinfo='{{item}}'>
+                          <view class='empty' />
+                          <text decode='true'>投&emsp;&emsp;票</text>
+                          <view class='empty' />
+                        </view>
+                        <view wx:else class='right-cannot-btn' catchtap='onShowVotePopup' data-voteinfo='{{item}}'>
+                          <view class='empty' />
+                          <text decode='true'>已&emsp;&emsp;投</text>
+                          <view class='empty' />
+                        </view>
+                      </view>
+                    </view>
+                    <view class='right-layout'>
+                      <image wx:if="{{item.matchPic}}" class='header-img' src='{{item.matchPic}}' mode='aspectFill' />
+                      <image wx:else class='header-img' src='../../images/bg_banner_default.jpg' mode='aspectFill' />
+                      <view class='poll-layout'>
+                        <view class='left-view'>
+                          <text class='mark'>得分:</text>
+                          <text class='value'>{{item.total}}</text>
+                        </view>
+                        <!-- <view class='right-view'>
+                            <image src='../../images/icon_list_flower.png' />
+                            <text class='value'>{{item.flower}}</text>
+                          </view> -->
+                      </view>
+                    </view>
+                  </view>
+                </block>
+              </view>
+
+            </view>
+          </scroll-view>
+          <scroll-view wx:elif="{{listTabIndex == '1'}}" scroll-y="true" class='list-scroll-layout' style='height: {{scrollHeight}}px'>
+            <view wx:if="{{isSameMonthLoadData}}" class='loading-layout' style='height: {{scrollHeight}}px'>
+              <view class="sk-three-bounce">
+                <view class="sk-child sk-bounce1"></view>
+                <view class="sk-child sk-bounce2"></view>
+                <view class="sk-child sk-bounce3"></view>
+              </view>
+            </view>
+            <view wx:elif="{{sameMonthNoData}}" class='empty-layout' style='height: {{emptyHeight}}px' catchtap='onloadOrderData'>
+              <view class='empty-view'>
+                <image src='../../images/icon_empty.png' />
+                <view>暂无数据</view>
+              </view>
+            </view>
+
+            <view wx:elif="{{isSameMonthNetError}}" class='error-layout' style='height: {{emptyHeight}}px' catchtap='onloadOrderData'>
+              <view class='error-view'>
+                <image src='../../images/icon_net_error.png' />
+                <view>网络异常,请轻点重试!</view>
+              </view>
+            </view>
+
+            <view wx:else>
+              <view class='list-layout'>
+                <block wx:for="{{sameMontList}}" wx:key="forkey">
+                  <view class='line margin-left-15 margin-right-15' />
+                  <view class='item-layout' catchtap='jumpVotePage' data-fhuaid='{{item.id}}'>
+                    <view class='left-layout'>
+                      <view class='mark-layout'>
+                        <image wx:if="{{item.rankingStatus == '1'}}" class='arrow-img' src='../../../images/icon_list_up.png' />
+                        <image wx:elif="{{item.rankingStatus == '2'}}" class='arrow-img' src='../../../images/icon_list_down.png' />
+                        <image wx:else class='arrow-img' />
+                        <view class='ranking-layout'>
+                          <image src='../../../images/icon_list_ranking.png' mode='widthFix' />
+                          <text>{{item.ranking}}</text>
+                        </view>
+                        <view class='title-layout'>
+                          <text class='top-nick'>{{item.wechatName}}</text>
+                          <image src="../../../images/{{item.sex == '1' ? 'icon_sex_male': 'icon_sex_female'}}.png" />
+                          <text wx:if="{{item.birthday}}" class='mark'>/</text>
+                          <text wx:if="{{item.birthday}}" class='age'>{{item.age}}岁</text>
+                        </view>
+                      </view>
+                      <view class='line' />
+                      <text wx:if="{{item.introduce}}" class='introduce-layout'>{{item.introduce}}</text>
+                      <text wx:else class='introduce-layout' />
+                      <view wx:if="{{item.community}}" class='address'>
+                        <text>{{item.community}}</text>
+                        <image src='../../../images/icon_list_address.png' />
+                      </view>
+                      <view wx:elif="{{item.street}}" class='address'>
+                        <text>{{item.street}}</text>
+                        <image src='../../../images/icon_list_address.png' />
+                      </view>
+                      <view wx:elif="{{item.country}}" class='address'>
+                        <text>{{item.country}}</text>
+                        <image src='../../../images/icon_list_address.png' />
+                      </view>
+                      <view wx:elif="{{item.city}}" class='address'>
+                        <text>{{item.city}}</text>
+                        <image src='../../../images/icon_list_address.png' />
+                      </view>
+                      <view wx:elif="{{item.province}}" class='address'>
+                        <text>{{item.province}}</text>
+                        <image src='../../../images/icon_list_address.png' />
+                      </view>
+                      <view wx:else class='address' />
+                      <view class='btn-layout' catchtap='onPlayIntroduce' data-src='{{item.matchVoice}}' data-index='{{index}}' data-type='1'>
+                        <view wx:if="{{item.matchVoice}}" class='left-btn'>
+                          <view class='empty' />
+                          <image wx:if="{{item.isPlaying}}" src='../../images/icon_playing.gif' />
+                          <image wx:else src='../../images/icon_play.png' />
+                          <text>个人介绍</text>
+                          <view class='empty' />
+                        </view>
+                        <view wx:else class='empty-btn' />
+                        <view wx:if="{{item.couponStatus == '0'}}" class='right-can-btn' catchtap='onShowVotePopup' data-voteinfo='{{item}}'>
+                          <view class='empty' />
+                          <text decode='true'>投&emsp;&emsp;票</text>
+                          <view class='empty' />
+                        </view>
+                        <view wx:else class='right-cannot-btn' catchtap='onShowVotePopup' data-voteinfo='{{item}}'>
+                          <view class='empty' />
+                          <text decode='true'>已&emsp;&emsp;投</text>
+                          <view class='empty' />
+                        </view>
+                      </view>
+                    </view>
+                    <view class='right-layout'>
+                      <image wx:if="{{item.matchPic}}" class='header-img' src='{{item.matchPic}}' mode='aspectFill' />
+                      <image wx:else class='header-img' src='../../images/bg_banner_default.jpg' mode='aspectFill' />
+                      <view class='poll-layout'>
+                        <view class='left-view'>
+                          <text class='mark'>得分:</text>
+                          <text class='value'>{{item.total}}</text>
+                        </view>
+                        <!-- <view class='right-view'>
+                            <image src='../../images/icon_list_flower.png' />
+                            <text class='value'>{{item.flower}}</text>
+                          </view> -->
+                      </view>
+                    </view>
+                  </view>
+                </block>
+              </view>
+            </view>
+          </scroll-view>
+          <scroll-view wx:elif="{{listTabIndex == '2'}}" scroll-y="true" class='list-scroll-layout' style='height: {{scrollHeight}}px'>
+
+            <view wx:if="{{isTotalLoadData}}" class='loading-layout' style='height: {{scrollHeight}}px'>
+              <view class="sk-three-bounce">
+                <view class="sk-child sk-bounce1"></view>
+                <view class="sk-child sk-bounce2"></view>
+                <view class="sk-child sk-bounce3"></view>
+              </view>
+            </view>
+            <view wx:elif="{{totalNoData}}" class='empty-layout' style='height: {{emptyHeight}}px' catchtap='onloadOrderData'>
+              <view class='empty-view'>
+                <image src='../../images/icon_empty.png' />
+                <view>暂无数据</view>
+              </view>
+            </view>
+
+            <view wx:elif="{{isTotalNetError}}" class='error-layout' style='height: {{emptyHeight}}px' catchtap='onloadOrderData'>
+              <view class='error-view'>
+                <image src='../../images/icon_net_error.png' />
+                <view>网络异常,请轻点重试!</view>
+              </view>
+            </view>
+
+            <view wx:else>
+              <view class='list-layout'>
+                <block wx:for="{{totalList}}" wx:key="forkey">
+                  <view class='line margin-left-15 margin-right-15' />
+                  <view class='item-layout' catchtap='jumpVotePage' data-fhuaid='{{item.id}}'>
+                    <view class='left-layout'>
+                      <view class='mark-layout'>
+                        <image wx:if="{{item.rankingStatus == '1'}}" class='arrow-img' src='../../images/icon_list_up.png' />
+                        <image wx:elif="{{item.rankingStatus == '2'}}" class='arrow-img' src='../../images/icon_list_down.png' />
+                        <image wx:else class='arrow-img' />
+                        <view class='ranking-layout'>
+                          <image src='../../images/icon_list_ranking.png' mode='widthFix' />
+                          <text>{{item.ranking}}</text>
+                        </view>
+                        <view class='title-layout'>
+                          <text class='top-nick'>{{item.wechatName}}</text>
+                          <image src="../../images/{{item.sex == '1' ? 'icon_sex_male': 'icon_sex_female'}}.png" />
+                          <text wx:if="{{item.birthday}}" class='mark'>/</text>
+                          <text wx:if="{{item.birthday}}" class='age'>{{item.age}}岁</text>
+                        </view>
+                      </view>
+                      <view class='line' />
+                      <text wx:if="{{item.introduce}}" class='introduce-layout'>{{item.introduce}}</text>
+                      <text wx:else class='introduce-layout' />
+                      <view wx:if="{{item.community}}" class='address'>
+                        <text>{{item.community}}</text>
+                        <image src='../../images/icon_list_address.png' />
+                      </view>
+                      <view wx:elif="{{item.street}}" class='address'>
+                        <text>{{item.street}}</text>
+                        <image src='../../images/icon_list_address.png' />
+                      </view>
+                      <view wx:elif="{{item.country}}" class='address'>
+                        <text>{{item.country}}</text>
+                        <image src='../../images/icon_list_address.png' />
+                      </view>
+                      <view wx:elif="{{item.city}}" class='address'>
+                        <text>{{item.city}}</text>
+                        <image src='../../images/icon_list_address.png' />
+                      </view>
+                      <view wx:elif="{{item.province}}" class='address'>
+                        <text>{{item.province}}</text>
+                        <image src='../../images/icon_list_address.png' />
+                      </view>
+                      <view wx:else class='address' />
+                      <view class='btn-layout' catchtap='onPlayIntroduce' data-src='{{item.matchVoice}}' data-index='{{index}}' data-type='2'>
+                        <view wx:if="{{item.matchVoice}}" class='left-btn'>
+                          <view class='empty' />
+                          <image wx:if="{{item.isPlaying}}" src='../../images/icon_playing.gif' />
+                          <image wx:else src='../../images/icon_play.png' />
+                          <text>个人介绍</text>
+                          <view class='empty' />
+                        </view>
+                        <view wx:else class='empty-btn' />
+                        <view wx:if="{{item.couponStatus == '0'}}" class='right-can-btn' catchtap='onShowVotePopup' data-voteinfo='{{item}}'>
+                          <view class='empty' />
+                          <text decode='true'>投&emsp;&emsp;票</text>
+                          <view class='empty' />
+                        </view>
+                        <view wx:else class='right-cannot-btn' catchtap='onShowVotePopup' data-voteinfo='{{item}}'>
+                          <view class='empty' />
+                          <text decode='true'>已&emsp;&emsp;投</text>
+                          <view class='empty' />
+                        </view>
+                      </view>
+                    </view>
+                    <view class='right-layout'>
+                      <image wx:if="{{item.matchPic}}" class='header-img' src='{{item.matchPic}}' mode='aspectFill' />
+                      <image wx:else class='header-img' src='../../images/bg_banner_default.jpg' mode='aspectFill' />
+                      <view class='poll-layout'>
+                        <view class='left-view'>
+                          <text class='mark'>得分:</text>
+                          <text class='value'>{{item.total}}</text>
+                        </view>
+                        <!-- <view class='right-view'>
+                            <image src='../../images/icon_list_flower.png' />
+                            <text class='value'>{{item.flower}}</text>
+                          </view> -->
+                      </view>
+                    </view>
+                  </view>
+                </block>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

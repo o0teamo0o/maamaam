@@ -205,7 +205,7 @@ Page({
         if (result.resCode == "00000") {
           if (utils.isEmpty(result.data)) {
             wx.reLaunch({
-              url: '../interest/interest',
+              url: './index',
             })
           } else {
             if (result.data.phoneNumber) {
@@ -226,7 +226,7 @@ Page({
               }
             } else {
               wx.reLaunch({
-                url: '../index/index',
+                url: '../../../pages/index/index',
               })
             }
           }

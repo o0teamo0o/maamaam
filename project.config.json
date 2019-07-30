@@ -32,7 +32,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 14,
+			"current": 15,
 			"list": [
 				{
 					"id": -1,
@@ -135,6 +135,14 @@
 					"id": -1,
 					"name": "兴趣爱好",
 					"pathName": "userinfo/pages/interest/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 15,
+					"name": "芳华榜",
+					"pathName": "product/pages/fh_list/index",
+					"query": "",
 					"scene": null
 				}
 			]

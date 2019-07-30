@@ -70,7 +70,7 @@ App({
       wx.cloud.callFunction({
         name: 'login',
         complete: res => {
-          res.result.openid = "";
+          res.result.openid = "oPXDy5EGled35k7r4QQqwKGU0Pn1";
           if (that.globalData.showLog) {
             console.info("当前用户openId:", res.result.openid)
           }

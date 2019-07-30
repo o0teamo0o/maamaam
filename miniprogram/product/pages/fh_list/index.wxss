@@ -1,0 +1,304 @@
+/* miniprogram/product/pages/fh_list/index.wxss */
+@import "../../../style/money.wxss";
+
+.list-top-layout .title-layout .bg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #be8567;
+}
+
+.list-top-layout .top-layout {
+  position: relative;
+}
+
+.list-top-layout .top-layout .bg {
+  width: 100vw;
+  height: auto;
+  display: block;
+}
+
+.list-top-layout .bottom-layout {
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background-image: linear-gradient(to right, rgba(90, 24, 12, 0), rgba(90, 24, 12, 0.5), rgba(113, 49, 30, 1), rgba(90, 24, 12, 0.5), rgba(90, 24, 12, 0));
+}
+
+.list-top-layout .bottom-layout .middle-line {
+  width: 2rpx;
+  height: 50rpx;
+  background-color: white;
+}
+
+.list-top-layout .bottom-layout .left-item,
+.list-top-layout .bottom-layout .right-item {
+  flex: 1;
+  line-height: 75rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.list-top-layout .bottom-layout .left-item:active,
+.list-top-layout .bottom-layout .right-item:active {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.list-content .border-layout .list-scroll-layout {
+  width: 100%;
+}
+
+.list-layout .item-layout {
+  display: flex;
+  padding: 0 15rpx 15rpx;
+}
+
+.list-layout .item-layout:active {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.list-layout .item-layout .left-layout {
+  flex: 1;
+  height: 39.5vw;
+  display: flex;
+  flex-direction: column;
+  margin-right: 30rpx;
+}
+
+.list-layout .item-layout .left-layout .mark-layout {
+  flex: 8;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.list-layout .item-layout .left-layout .mark-layout .arrow-img {
+  width: 15rpx;
+  height: 35rpx;
+  margin-top: 7rpx;
+}
+
+.list-layout .item-layout .left-layout .mark-layout .ranking-layout {
+  position: relative;
+  margin-left: 5rpx;
+  margin-right: 20rpx;
+}
+
+.list-layout .item-layout .left-layout .mark-layout .ranking-layout image {
+  width: 37rpx;
+  height: auto;
+}
+
+.list-layout .item-layout .left-layout .mark-layout .ranking-layout text {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-size: 28rpx;
+  left: 8rpx;
+  font-family: 'Corki';
+}
+
+.list-layout .item-layout .left-layout .title-layout {
+  flex: 10;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  color: #333;
+  line-height: 70rpx;
+  z-index: 0;
+}
+
+.list-layout .item-layout .left-layout .title-layout .nick {
+  max-width: 266rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-layout .item-layout .left-layout .title-layout .top-nick {
+  max-width: 193rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-layout .item-layout .left-layout .title-layout image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+}
+
+.list-layout .item-layout .left-layout .title-layout .mark {
+  width: 10rpx;
+  margin: 0 30rpx 0 20rpx;
+}
+
+.list-layout .item-layout .left-layout .title-layout .age {
+  width: 80rpx;
+}
+
+.list-layout .item-layout .left-layout .introduce-layout {
+  flex: 10;
+  color: #999;
+  font-size: 30rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 440rpx;
+  vertical-align: bottom;
+  line-height: 70rpx;
+}
+
+.list-layout .item-layout .left-layout .address {
+  flex: 11;
+  color: #a96d37;
+  text-align: right;
+}
+
+.list-layout .item-layout .left-layout .address text {
+  vertical-align: middle;
+}
+
+.list-layout .item-layout .left-layout .address image {
+  width: 25rpx;
+  height: 25rpx;
+  margin-left: 20rpx;
+  vertical-align: middle;
+}
+
+.list-layout .item-layout .left-layout .btn-layout {
+  flex: 11;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.list-layout .item-layout .left-layout .btn-layout .left-btn {
+  flex: 1;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  border-radius: 5rpx;
+  border: 1rpx solid #bf8766;
+  color: #bf8766;
+  height: 100%;
+}
+
+.list-layout .item-layout .left-layout .btn-layout .empty-btn {
+  flex: 1;
+}
+
+.list-layout .item-layout .left-layout .btn-layout .left-btn image {
+  width: 55rpx;
+  height: 55rpx;
+}
+
+.list-layout .item-layout .left-layout .btn-layout .left-btn text {
+  margin-left: 15rpx;
+}
+
+.list-layout .item-layout .left-layout .btn-layout .left-btn .empty {
+  flex: 1;
+}
+
+.list-layout .item-layout .left-layout .btn-layout .right-can-btn {
+  flex: 1;
+  margin-left: 15rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  border-radius: 5rpx;
+  color: white;
+  background-color: #ed6f40;
+  border: 1rpx solid #ed6f40;
+  height: 100%;
+  text-align: center;
+}
+
+.list-layout .item-layout .left-layout .btn-layout .right-cannot-btn {
+  flex: 1;
+  margin-left: 15rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  border-radius: 5rpx;
+  color: white;
+  background-color: #7ebfd4;
+  border: 1rpx solid #7ebfd4;
+  height: 100%;
+  text-align: center;
+}
+
+.list-layout .item-layout .left-layout .btn-layout .right-can-btn:active {
+  background-color: #db6338;
+}
+
+.list-layout .item-layout .left-layout .btn-layout .right-can-btn .empty {
+  flex: 1;
+}
+
+.list-layout .item-layout .left-layout .btn-layout .right-cannot-btn .empty {
+  flex: 1;
+}
+
+.list-layout .item-layout .right-layout {
+  width: 30vw;
+}
+
+.list-layout .item-layout .right-layout .header-img {
+  width: 30vw;
+  height: 30vw;
+  margin-top: 20rpx;
+  border-radius: 5rpx;
+}
+
+.list-layout .item-layout .right-layout .poll-layout {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  padding: 10rpx 0;
+}
+
+.list-layout .item-layout .right-layout .poll-layout .left-view {
+  flex: 14;
+}
+
+.list-layout .item-layout .right-layout .poll-layout .right-view {
+  flex: 10;
+  text-align: right;
+}
+
+.list-layout .item-layout .right-layout .poll-layout .left-view .mark {
+  color: #333;
+  vertical-align: middle;
+}
+
+.list-layout .item-layout .right-layout .poll-layout .left-view .value {
+  color: #b25c3a;
+  margin-left: 10rpx;
+  vertical-align: middle;
+  font-family: 'Corki';
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.list-layout .item-layout .right-layout .poll-layout .right-view image {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+
+.list-layout .item-layout .right-layout .poll-layout .right-view .value {
+  color: #b25c3a;
+  margin-left: 10rpx;
+  vertical-align: middle;
+  font-family: 'Corki';
+}

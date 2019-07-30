@@ -70,7 +70,7 @@ Page({
           if (utils.isEmpty(result.data)) {
             setTimeout(function() {
               wx.reLaunch({
-                url: '../interest/interest?isBack=true',
+                url: '../../userinfo/pages/interest/index?isBack=true',
               })
             }, loadingTime);
           } else {
