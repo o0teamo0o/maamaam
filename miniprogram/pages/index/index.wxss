@@ -549,3 +549,22 @@
   font-weight: bold;
   color: #696969;
 }
+
+.goods-recommend-layout>.empty-integral-layout>.empty {
+  width: 310rpx;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 25%;
+}
+
+.goods-recommend-layout>.empty-integral-layout>.empty>.empty-icon {
+  width: 120rpx;
+  height: auto;
+  display: block;
+}
+
+.goods-recommend-layout>.empty-integral-layout>.empty>.empty-hint {
+  color: #cdcdcd;
+}

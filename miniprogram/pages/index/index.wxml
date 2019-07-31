@@ -109,124 +109,171 @@
   <tabs active="{{ currentTabIndex }}" bind:disabled="onClickDisabled" color="#ff8745">
     <tab title="活动">
       <view class='goods-recommend-layout'>
-        <view class='item-layout' wx:for="{{tourProductList}}" wx:key="key">
-          <view class='img-content' catchtap='jumpGoodsInfoPage' data-info='{{item}}'>
-            <image wx:if="{{item.recommendImageUrl}}" class='goods-img' src="{{item.recommendImageUrl}}" mode='widthFix' />
-            <image wx:else class='goods-img' src='../../images/bg_banner_defalut.png' mode='widthFix' />
-            <image wx:if="{{item.isSignUp}}" class="mark-icon" src="../../images/{{item.isActivity == '1' ? 'icon_signup' : 'icon_buy'}}.png" mode='widthFix' />
+        <view class="loading-layout" wx:if="{{!tourProductList}}" style="height:300px">
+          <view class="sk-three-bounce">
+            <view class="sk-child sk-bounce1" />
+            <view class="sk-child sk-bounce2" />
+            <view class="sk-child sk-bounce3" />
           </view>
-          <view class='explain-layout' catchtap='jumpGoodsInfoPage' data-info='{{item}}'>
-            <view class='left-view'>
-              <view class='title-layout'>
-                <text wx:if="{{item.isActivity == '1'}}" class='big-title'>{{item.title}}</text>
-                <text class='small-title'>{{item.stitle}}</text>
-              </view>
-              <view class='small-title'>{{item.remark}}</view>
-            </view>
-            <view class='right-view'>
-              <view wx:if="{{item.activityAmount}}">
-                <view class='price-text'>{{item.activityAmount}}</view>
-              </view>
-              <view wx:else class='price-text'>{{item.amount}}</view>
-            </view>
-          </view>
-          <view class='sign-up-layout'>
-            <view class='left-view'>
-              <van-button custom-class='btn-recommend' open-type="share" data="{{item}}">推荐给好友</van-button>
-              <text class='btn-sign-up' wx:if="{{item.isSignUp == false}}" catchtap='onSignUp' data-info='{{item}}'>{{item.isActivity == '1' ? '我要报名' : '我要购买'}}</text>
-              <text class='allowance'>剩余: {{item.productNumber}} 份</text>
-            </view>
-            <view class='right-view'>
-              <view wx:if="{{item.activityAmount}}">
-                <view class='original-text'>{{item.amount}}</view>
-                <view>{{item.company}}</view>
-              </view>
-              <view wx:else>{{item.company}}</view>
-            </view>
-          </view>
-          <view class='goods-line' />
         </view>
+        <view wx:elif="{{tourProductList.length == 0}}" class='empty-integral-layout' style="height:300px; line-height:300px">
+          <view class='empty'>
+            <image class='empty-icon' src='../../images/icon_empty_goods.png' mode='widthFix' />
+            <text class='empty-hint'>暂无活动推荐</text>
+          </view>
+        </view>
+        <block wx:else>
+          <view class='item-layout' wx:for="{{tourProductList}}" wx:key="key">
+            <view class='img-content' catchtap='jumpGoodsInfoPage' data-info='{{item}}'>
+              <image wx:if="{{item.recommendImageUrl}}" class='goods-img' src="{{item.recommendImageUrl}}" mode='widthFix' />
+              <image wx:else class='goods-img' src='../../images/bg_banner_defalut.png' mode='widthFix' />
+              <image wx:if="{{item.isSignUp}}" class="mark-icon" src="../../images/{{item.isActivity == '1' ? 'icon_signup' : 'icon_buy'}}.png" mode='widthFix' />
+            </view>
+            <view class='explain-layout' catchtap='jumpGoodsInfoPage' data-info='{{item}}'>
+              <view class='left-view'>
+                <view class='title-layout'>
+                  <text wx:if="{{item.isActivity == '1'}}" class='big-title'>{{item.title}}</text>
+                  <text class='small-title'>{{item.stitle}}</text>
+                </view>
+                <view class='small-title'>{{item.remark}}</view>
+              </view>
+              <view class='right-view'>
+                <view wx:if="{{item.activityAmount}}">
+                  <view class='price-text'>{{item.activityAmount}}</view>
+                </view>
+                <view wx:else class='price-text'>{{item.amount}}</view>
+              </view>
+            </view>
+            <view class='sign-up-layout'>
+              <view class='left-view'>
+                <van-button custom-class='btn-recommend' open-type="share" data="{{item}}">推荐给好友</van-button>
+                <text class='btn-sign-up' wx:if="{{item.isSignUp == false}}" catchtap='onSignUp' data-info='{{item}}'>{{item.isActivity == '1' ? '我要报名' : '我要购买'}}</text>
+                <text class='allowance'>剩余: {{item.productNumber}} 份</text>
+              </view>
+              <view class='right-view'>
+                <view wx:if="{{item.activityAmount}}">
+                  <view class='original-text'>{{item.amount}}</view>
+                  <view>{{item.company}}</view>
+                </view>
+                <view wx:else>{{item.company}}</view>
+              </view>
+            </view>
+            <view class='goods-line' />
+          </view>
+        </block>
       </view>
     </tab>
 
     <tab title="良品">
       <view class='goods-recommend-layout'>
-        <view class='item-layout' wx:for="{{goodsProductList}}" wx:key="key">
-          <view class='img-content' catchtap='jumpGoodsInfoPage' data-info='{{item}}'>
-            <image wx:if="{{item.recommendImageUrl}}" class='goods-img' src="{{item.recommendImageUrl}}" mode='widthFix' />
-            <image wx:else class='goods-img' src='../../images/bg_banner_defalut.png' mode='widthFix' />
-            <image wx:if="{{item.isSignUp}}" class="mark-icon" src="../../images/{{item.isActivity == '1' ? 'icon_signup' : 'icon_buy'}}.png" mode='widthFix' />
+        <view class="loading-layout" wx:if="{{!goodsProductList}}" style="height:300px">
+          <view class="sk-three-bounce">
+            <view class="sk-child sk-bounce1" />
+            <view class="sk-child sk-bounce2" />
+            <view class="sk-child sk-bounce3" />
           </view>
-          <view class='explain-layout' catchtap='jumpGoodsInfoPage' data-info='{{item}}'>
-            <view class='left-view'>
-              <view class='title-layout'>
-                <text wx:if="{{item.isActivity == '1'}}" class='big-title'>{{item.title}}</text>
-                <text class='small-title'>{{item.stitle}}</text>
-              </view>
-              <view class='small-title'>{{item.remark}}</view>
-            </view>
-            <view class='right-view'>
-              <view wx:if="{{item.activityAmount}}">
-                <view class='price-text'>{{item.activityAmount}}</view>
-              </view>
-              <view wx:else class='price-text'>{{item.amount}}</view>
-            </view>
-          </view>
-          <view class='sign-up-layout'>
-            <view class='left-view'>
-              <van-button custom-class='btn-recommend' open-type="share" data="{{item}}">推荐给好友</van-button>
-              <text class='btn-sign-up' wx:if="{{item.isSignUp == false}}" catchtap='onSignUp' data-info='{{item}}'>{{item.isActivity == '1' ? '我要报名' : '我要购买'}}</text>
-              <text class='allowance'>剩余: {{item.productNumber}} 份</text>
-            </view>
-            <view class='right-view'>
-              <view wx:if="{{item.activityAmount}}">
-                <view class='original-text'>{{item.amount}}</view>
-                <view>{{item.company}}</view>
-              </view>
-              <view wx:else>{{item.company}}</view>
-            </view>
-          </view>
-          <view class='goods-line' />
         </view>
+        <view wx:elif="{{goodsProductList.length == 0}}" class='empty-integral-layout' style="height:300px; line-height:300px">
+          <view class='empty'>
+            <image class='empty-icon' src='../../images/icon_empty_goods.png' mode='widthFix' />
+            <text class='empty-hint'>暂无良品推荐</text>
+          </view>
+        </view>
+        <block wx:else>
+          <view class='item-layout' wx:for="{{goodsProductList}}" wx:key="key">
+            <view class='img-content' catchtap='jumpGoodsInfoPage' data-info='{{item}}'>
+              <image wx:if="{{item.recommendImageUrl}}" class='goods-img' src="{{item.recommendImageUrl}}" mode='widthFix' />
+              <image wx:else class='goods-img' src='../../images/bg_banner_defalut.png' mode='widthFix' />
+              <image wx:if="{{item.isSignUp}}" class="mark-icon" src="../../images/{{item.isActivity == '1' ? 'icon_signup' : 'icon_buy'}}.png" mode='widthFix' />
+            </view>
+            <view class='explain-layout' catchtap='jumpGoodsInfoPage' data-info='{{item}}'>
+              <view class='left-view'>
+                <view class='title-layout'>
+                  <text wx:if="{{item.isActivity == '1'}}" class='big-title'>{{item.title}}</text>
+                  <text class='small-title'>{{item.stitle}}</text>
+                </view>
+                <view class='small-title'>{{item.remark}}</view>
+              </view>
+              <view class='right-view'>
+                <view wx:if="{{item.activityAmount}}">
+                  <view class='price-text'>{{item.activityAmount}}</view>
+                </view>
+                <view wx:else class='price-text'>{{item.amount}}</view>
+              </view>
+            </view>
+            <view class='sign-up-layout'>
+              <view class='left-view'>
+                <van-button custom-class='btn-recommend' open-type="share" data="{{item}}">推荐给好友</van-button>
+                <text class='btn-sign-up' wx:if="{{item.isSignUp == false}}" catchtap='onSignUp' data-info='{{item}}'>{{item.isActivity == '1' ? '我要报名' : '我要购买'}}</text>
+                <text class='allowance'>剩余: {{item.productNumber}} 份</text>
+              </view>
+              <view class='right-view'>
+                <view wx:if="{{item.activityAmount}}">
+                  <view class='original-text'>{{item.amount}}</view>
+                  <view>{{item.company}}</view>
+                </view>
+                <view wx:else>{{item.company}}</view>
+              </view>
+            </view>
+            <view class='goods-line' />
+          </view>
+        </block>
       </view>
     </tab>
 
     <tab title="积分兑">
-      <view class="integral-exchange-layout">
-        <view class='list-half'>
-          <view wx:for="{{integralExchangeData}}" wx:key="index" wx:if="{{index%2 == 0}}" class='card'>
-            <view class="img-layout">
-              <image class="img-goods" src="{{item.url}}" mode="widthFix" />
-              <view class="name-view">{{item.name}}</view>
-            </view>
-            <view class="bottom-view">
-              <view class="title">{{item.name}}</view>
-              <view class="num-view">
-                <view class="price">¥{{item.price}}</view>
-                <view class="integral-view">
-                  <text class="value">{{item.integral}} </text> 积分</view>
-              </view>
-            </view>
-            <view class="card-click" hover-class='card-hover' />
+      <view class='goods-recommend-layout'>
+        <view class="loading-layout" wx:if="{{!integralExchangeList}}" style="height:300px">
+          <view class="sk-three-bounce">
+            <view class="sk-child sk-bounce1" />
+            <view class="sk-child sk-bounce2" />
+            <view class="sk-child sk-bounce3" />
           </view>
         </view>
-        <view class='list-half'>
-          <view wx:for="{{integralExchangeData}}" wx:key="index" wx:if="{{index%2 != 0}}" class='card'>
-            <view class="img-layout">
-              <image class="img-goods" src="{{item.url}}" mode="widthFix" />
-              <view class="name-view">{{item.name}}</view>
-            </view>
-            <view class="bottom-view">
-              <view class="title">{{item.name}}</view>
-              <view class="num-view">
-                <view class="price">¥{{item.price}}</view>
-                <view class="integral-view">
-                  <text class="value">{{item.integral}} </text> 积分</view>
-              </view>
-            </view>
-            <view class="card-click" hover-class='card-hover' />
+        <view wx:elif="{{integralExchangeList.length == 0}}" class='empty-integral-layout' style="height:300px; line-height:300px">
+          <view class='empty'>
+            <image class='empty-icon' src='../../images/icon_empty_goods.png' mode='widthFix' />
+            <text class='empty-hint'>暂无兑换商品</text>
           </view>
         </view>
+        <block wx:else>
+          <view class="integral-exchange-layout">
+            <view class='list-half'>
+              <view wx:for="{{integralExchangeList}}" wx:key="index" wx:if="{{index%2 == 0}}" class='card'>
+                <view class="img-layout">
+                  <image class="img-goods" src="{{item.url}}" mode="widthFix" />
+                  <view class="name-view">{{item.name}}</view>
+                </view>
+                <view class="bottom-view">
+                  <view class="title">{{item.name}}</view>
+                  <view class="num-view">
+                    <view class="price">¥{{item.price}}</view>
+                    <view class="integral-view">
+                      <text class="value">{{item.integral}} </text> 积分</view>
+                  </view>
+                </view>
+                <view class="card-click" hover-class='card-hover' />
+              </view>
+            </view>
+            <view class='list-half'>
+              <view wx:for="{{integralExchangeList}}" wx:key="index" wx:if="{{index%2 != 0}}" class='card'>
+                <view class="img-layout">
+                  <image class="img-goods" src="{{item.url}}" mode="widthFix" />
+                  <view class="name-view">{{item.name}}</view>
+                </view>
+                <view class="bottom-view">
+                  <view class="title">{{item.name}}</view>
+                  <view class="num-view">
+                    <view class="price">¥{{item.price}}</view>
+                    <view class="integral-view">
+                      <text class="value">{{item.integral}} </text> 积分</view>
+                  </view>
+                </view>
+                <view class="card-click" hover-class='card-hover' />
+              </view>
+            </view>
+          </view>
+        </block>
       </view>
     </tab>
   </tabs>
