@@ -1,11 +1,13 @@
 // miniprogram/userinfo/pages/info/index.js
+const app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    userInfo: null, //用户信息
   },
 
   /**
@@ -26,7 +28,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this;
+    that.setData({
+      userInfo: app.globalData.userInfo,
+    })
   },
 
   /**

@@ -18,7 +18,8 @@
           <view class="mark" />
           <text class="key">头像</text>
           <view class="flex-1" />
-          <image class="img-header" src="../../../images/icon_default_header.png" mode="widthFix" />
+          <image class="img-header" wx:if="{{userInfo.headImgUrl}}" src='{{userInfo.headImgUrl}}' mode="widthFix" />
+          <image class="img-header" wx:else src="../../../images/icon_default_header.png" mode="widthFix" />
           <image class="img-arrow" src="../../../images/icon_arrow.png" mode="widthFix" />
         </view>
         <view class="line margin-left-40 margin-right-40" />
@@ -26,7 +27,8 @@
           <view class="mark" />
           <text class="key">昵称</text>
           <view class="flex-1" />
-          <text class="value">昵称</text>
+          <text class="value" wx:if="{{userInfo.wechatName}}">{{userInfo.wechatName}}</text>
+          <text class="value" wx:else>请完善昵称</text>
           <image class="img-arrow" src="../../../images/icon_arrow.png" mode="widthFix" />
         </view>
         <view class="line margin-left-40 margin-right-40" />
@@ -34,26 +36,28 @@
           <view class="mark" />
           <text class="key">姓名</text>
           <view class="flex-1" />
-          <text class="value">姓名</text>
+          <text wx:if="{{userInfo.customerName}}" class="value">{{userInfo.customerName}}</text>
+          <text wx:else class="value">请完善真实姓名</text>
           <image class="img-arrow" src="../../../images/icon_arrow.png" mode="widthFix" />
         </view>
         <view class="line margin-left-40 margin-right-40" />
-        <view class="item-layout" hover-class="click-hover">
+        <view wx:if="{{userInfo.idNumber}}" class="item-layout" hover-class="click-hover">
           <view class="mark" />
           <text class="key">性别</text>
           <view class="flex-1" />
-          <text class="value">性别</text>
+          <text wx:if="{{userInfo.sex}}" class="value">{{userInfo.sex == 1 ? '男' : '女'}}</text>
+          <text wx:else class="value">请完善性别</text>
           <image class="img-arrow" src="../../../images/icon_arrow.png" mode="widthFix" />
         </view>
-        <view class="line margin-left-40 margin-right-40" />
-        <view class="item-layout" hover-class="click-hover">
+        <view wx:if="{{userInfo.idNumber}}" class="line margin-left-40 margin-right-40" />
+        <view wx:if="{{userInfo.idNumber}}" class="item-layout" hover-class="click-hover">
           <view class="mark" />
           <text class="key">出生日期</text>
           <view class="flex-1" />
           <text class="value">1999.03.02</text>
           <image class="img-arrow" src="../../../images/icon_arrow.png" mode="widthFix" />
         </view>
-        <view class="line margin-left-40 margin-right-40" />
+        <view wx:if="{{userInfo.idNumber}}" class="line margin-left-40 margin-right-40" />
         <view class="item-layout" hover-class="click-hover">
           <view class="mark" />
           <text class="key">手机号码</text>
@@ -66,7 +70,8 @@
           <view class="mark" />
           <text class="key">身份证号码</text>
           <view class="flex-1" />
-          <text class="value">430***********6621</text>
+          <text wx:if="{{userInfo.idNumber}}" class="value">{{userInfo.idNumberStr}}</text>
+          <text wx:else class="value">请完善身份证信息</text>
           <image class="img-arrow" src="../../../images/icon_arrow.png" mode="widthFix" />
         </view>
         <view class="line margin-left-40 margin-right-40" />
@@ -74,7 +79,8 @@
           <view class="mark" />
           <text class="key">收件地址</text>
           <view class="flex-1" />
-          <text class="value">地址地址地址地址地址地址地址地址地址地址地址地址地址</text>
+          <text wx:if="{{userInfo.province}}" class="value">{{userInfo.province}} {{userInfo.city}} {{userInfo.country}} {{userInfo.street}} {{userInfo.community}} {{userInfo.address}}</text>
+          <text wx:else class="value">请完善所在社区</text>
           <image class="img-arrow" src="../../../images/icon_arrow.png" mode="widthFix" />
         </view>
       </view>

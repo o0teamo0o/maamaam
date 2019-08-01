@@ -3,7 +3,7 @@ import Notify from './components/notify/notify.js';
 
 App({
 
-  globalData: {
+    globalData: {
     navHeight: 0, //导航栏高度
     isDebug: true,
     showLog: true,
