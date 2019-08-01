@@ -1,0 +1,138 @@
+<!--miniprogram/product/pages/goodsInfo/index.wxml-->
+<view class='body'>
+  <view class="wrap flex flex-v">
+    <toast id="notify" />
+    <view class='main flex-1'>
+      <view class='banner-layout'>
+        <swiper class='banner-swiper' style="height:{{imgHeights[swiperCurrent]}}rpx;" autoplay="{{autoplaySwiper}}" current='{{swiperCurrent}}' interval="5000" circular='true' bindchange="onSwiperChangeListener" indicator-dots="true" indicator-active-color="#FFFFFF">
+          <swiper-item wx:for="{{goodsInfo.bannerRecommendList}}" wx:key="key">
+            <image wx:if="{{item}}" src="{{item}}" mode='widthFix' class="slide-image" bindload="imageLoad" data-id='{{index}}' />
+            <image wx:else src="../../images/bg_banner_default.jpg" mode='widthFix' class="slide-image" bindload="imageLoad" data-id='{{index}}' />
+          </swiper-item>
+        </swiper>
+      </view>
+
+      <view class='goods-recommend-layout'>
+        <view class='explain-layout'>
+          <view class='left-view'>
+            <view class='title-layout'>
+              <text wx:if="{{goodsInfo.isActivity == '1'}}" class='big-title'>{{goodsInfo.title}}</text>
+              <text class='small-title'>{{goodsInfo.stitle}}</text>
+            </view>
+            <view class='small-title'>{{goodsInfo.remark}}</view>
+          </view>
+          <view class='right-view'>
+            <view wx:if="{{goodsInfo.activityAmount}}">
+              <view class='price-text'>{{goodsInfo.activityAmount}}</view>
+            </view>
+            <view wx:else class='price-text'>{{goodsInfo.amount}}</view>
+          </view>
+        </view>
+        <view class='sign-up-layout'>
+          <view class='left-view'>
+            <van-button custom-class='btn-recommend' open-type="share">推荐给好友</van-button>
+            <text class='allowance'>剩余: {{goodsInfo.productNumber}} 份</text>
+          </view>
+          <view class='right-view'>
+            <view wx:if="{{goodsInfo.activityAmount}}">
+              <view class='original-text'>{{goodsInfo.amount}}</view>
+              <view>{{goodsInfo.company}}</view>
+            </view>
+            <view wx:else>{{goodsInfo.company}}</view>
+          </view>
+        </view>
+      </view>
+
+      <view class='details-img-layout' wx:if="{{goodsInfo.detailRecommendList}}">
+        <block wx:for="{{goodsInfo.detailRecommendList}}" wx:key="forkey">
+          <image class="details-image" src="{{item}}" mode='widthFix' />
+        </block>
+      </view>
+    </view>
+
+    <view class='tabbar-layout'>
+      <van-button custom-class='share-layout' open-type="share">
+        <image src='../../images/icon_share.png' />
+        <text>分享</text>
+      </van-button>
+      <van-button custom-class='service-layout' open-type="contact">客服小漫</van-button>
+      <block wx:if="{{goodsInfo.isSignUp}}">
+        <view wx:if="{{goodsInfo.isActivity == '1'}}" class='partake-layout-confirm' catchtap='onSignUpHint'>修改意愿</view>
+        <view wx:else class='over-layout'>已购买</view>
+      </block>
+      <block wx:else>
+        <block wx:if="{{isOrderJump}}">
+          <view class='over-layout'>已结束</view>
+        </block>
+        <block wx:else>
+          <view wx:if="{{showPartakePopup}}" class='partake-layout-confirm' catchtap='confirmSignUp'>{{goodsInfo.isActivity == '1' ? '确认参与' : '我要购买'}}</view>
+          <block wx:else>
+            <view wx:if="{{goodsInfo.ticketCount > 0}}" class='partake-layout' catchtap='checkUserInfo'>{{goodsInfo.isActivity == '1' ? '我要参与' : '我要购买'}}</view>
+            <view wx:else class='over-layout'>已售馨</view>
+          </block>
+        </block>
+      </block>
+    </view>
+  </view>
+</view>
+
+<view>
+  <popup show="{{ showPartakePopup }}" bind:close="onPartakePopupClose" position="bottom">
+    <view class='partake-popup-layout'>
+      <view class='title'>{{goodsInfo.bigTitle}}</view>
+      <view class='line' />
+      <view class='mark-time'>出发日期</view>
+      <tabs type="line" color="#7AD2D3" animated="true" swipeable="true" active="{{monthIndex}}" bind:change="onTabChange">
+        <tab wx:for="{{goodsInfo.monthArr}}" wx:key="forkey" title="{{item.month}}" />
+      </tabs>
+      <view class='line' />
+      <calendar id="calendar" />
+      <view class='line' />
+      <view class='count-layout'>
+        <view class='left-view'>购买份数</view>
+        <view class='right-view'>
+          <input-number typeValue="number" value="{{goodsInfo.ticketCount}}" min="1" step="1" max="{{goodsInfo.productNumber}}" bindchange="onTicketChangeListener" />
+        </view>
+      </view>
+      <view class='line' />
+      <view class='userinfo-layout'>
+        <view class='left-view'>您的姓名</view>
+        <view class='right-view'>{{userInfo.customerName}}</view>
+      </view>
+      <view class='userinfo-layout'>
+        <view class='left-view'>您的联系方式</view>
+        <view class='right-view'>{{userInfo.formatPhoneNumber}}</view>
+      </view>
+      <view class='line' />
+      <view class='money-layout'>
+        <view class='left-view'>商品总金额</view>
+        <view class='right-view'>
+          <text class='price-mark1'>￥ </text>
+          <text class='price'>{{goodsInfo.buyPrice}}</text>
+          <text class='price-mark2'> 元</text>
+        </view>
+      </view>
+      <view class='bottom ' />
+    </view>
+  </popup>
+
+
+  <popup show="{{ showConfirmSignUpPopup }}" bind:close="onSignupPopupClose" position="center" z-index="102">
+    <view class='signup-popup-layout'>
+      <image class='btn-close' src='../../images/icon_popup_close.png' />
+      <view class='clear' />
+      <view class='close-line' />
+      <view class='clear' />
+      <view class='content'>
+        <image class='signup-bg' src='../../images/bg_signup_popup.png' mode='widthFix' />
+        <view class="text-layout">
+          <text class='text-info' decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;感谢您{{userInfo.isActivity == '1' ? '报名参与' : '购买'}}慢漫为您推荐的【{{goodsInfo.bigTitle}}】活动行程!稍后将有客服小漫与您联系，为您尽心安排。</text>
+        </view>
+        <view class='btn-confirm' catchtap='onSignupPopupClose'>好 的</view>
+        <image class='mark-tree' src='../../images/icon_popup_mark.png' />
+      </view>
+    </view>
+  </popup>
+
+  <dialog id="dialog" />
+</view>

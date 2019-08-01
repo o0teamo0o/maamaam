@@ -229,6 +229,27 @@ Page({
   },
 
   /**
+   * 跳转到商品详情页面
+   */
+  jumpGoodsInfoPage: function (e) {
+    var that = this;
+    var info = e.currentTarget.dataset.info;
+    var index = e.currentTarget.dataset.index;
+
+    if (index == '0') {
+      that.onLoadNewestData();
+      that.setData({
+        isShowPartakePage: 1,
+      })
+    } else {
+      app.globalData.goodsInfo = JSON.stringify(info);
+      wx.navigateTo({
+        url: '../../product/pages/goodsInfo/index',
+      })
+    }
+  },
+
+  /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function() {

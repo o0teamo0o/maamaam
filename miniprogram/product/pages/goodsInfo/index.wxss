@@ -1,0 +1,365 @@
+/* miniprogram/product/pages/goodsInfo/index.wxss */
+@import "../../../style/money.wxss";
+
+.tabbar-layout {
+  height: 120rpx;
+  width: 100%;
+  display: flex;
+  z-index: 101;
+  align-content: center;
+  background-color: white;
+  align-items: center;
+  box-shadow: 0 -8rpx 10rpx rgba(0, 0, 0, 0.05);
+  font-size: 36rpx;
+}
+
+.tabbar-layout .share-layout {
+  width: 25vw;
+  text-align: center;
+  border: none;
+  padding: 0;
+  line-height: 120rpx;
+  height: 120rpx;
+}
+
+.tabbar-layout .share-layout:active {
+  background-color: #f6f6f6;
+}
+
+.tabbar-layout .share-layout image {
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+}
+
+.tabbar-layout .share-layout text {
+  vertical-align: middle;
+  margin-left: 15rpx;
+  color: #adadad;
+  font-size: 36rpx;
+}
+
+.tabbar-layout .service-layout {
+  flex: 1;
+  border: 1rpx solid #1bb3a6;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+  color: #1bb3a6;
+  margin: 10rpx;
+  height: auto;
+  font-size: 36rpx;
+}
+
+.tabbar-layout .partake-layout {
+  flex: 1;
+  border: 1rpx solid #1bb3a6;
+  background-color: #1bb3a6;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+  color: white;
+  height: auto;
+  margin: 10rpx 30rpx 10rpx 10rpx;
+}
+
+.tabbar-layout .over-layout {
+  flex: 1;
+  border: 1rpx solid #ddd;
+  background-color: #ddd;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+  color: white;
+  height: auto;
+  margin: 10rpx 30rpx 10rpx 10rpx;
+}
+
+.tabbar-layout .partake-layout-confirm {
+  flex: 1;
+  border: 1rpx solid #ea6465;
+  background-color: #ea6465;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+  color: white;
+  height: auto;
+  margin: 10rpx 30rpx 10rpx 10rpx;
+}
+
+.banner-layout {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide-image {
+  width: 100vw;
+  height: auto;
+  animation: fadeIn 1s both;
+}
+
+.goods-recommend-layout {
+  background-color: white;
+  padding: 20rpx 45rpx 10rpx;
+}
+
+.goods-recommend-layout .explain-layout {
+  display: flex;
+  width: 100%;
+  padding: 10rpx 0 0;
+  align-items: center;
+  align-content: center;
+  box-sizing: border-box;
+}
+
+.goods-recommend-layout .explain-layout .left-view {
+  flex: 1;
+}
+.goods-recommend-layout .explain-layout .left-view .title-layout {
+  z-index: 0;
+}
+
+.goods-recommend-layout .explain-layout .left-view .title-layout .big-title {
+  color: #3b3b3b;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.goods-recommend-layout .explain-layout .left-view .small-title {
+  color: #3b3b3b;
+  font-size: 30rpx;
+}
+
+.goods-recommend-layout .explain-layout .right-view {
+  text-align: right;
+}
+
+.goods-recommend-layout .explain-layout .right-view .price-text {
+  color: #01a99c;
+  font-size: 90rpx;
+  font-family: 'Corki';
+  margin-left: 30rpx;
+}
+
+.goods-recommend-layout .sign-up-layout {
+  display: flex;
+  padding: 10rpx 0;
+  align-items: center;
+  align-content: center;
+  font-size: 30rpx;
+}
+
+.goods-recommend-layout .sign-up-layout .left-view {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.goods-recommend-layout .sign-up-layout .left-view .btn-recommend {
+  color: #01907e;
+  border: 1rpx solid #01907e;
+  border-radius: 5rpx;
+  padding: 3rpx 15rpx;
+  margin-right: 30rpx;
+  line-height: 48rpx;
+  height: 55rpx;
+  font-size: 30rpx;
+}
+
+.goods-recommend-layout .sign-up-layout .left-view .btn-sign-up {
+  color: white;
+  border: 1rpx solid #01907e;
+  background-color: #01907e;
+  border-radius: 5rpx;
+  padding: 5rpx 15rpx;
+  margin-right: 30rpx;
+}
+
+.goods-recommend-layout .sign-up-layout .left-view .allowance {
+  color: #01907e;
+  font-size: 30rpx;
+}
+
+.goods-recommend-layout .sign-up-layout .right-view {
+  text-align: right;
+  color: #3b3b3b;
+}
+
+.goods-recommend-layout .sign-up-layout .right-view .original-text {
+  color: #cbcbcb;
+  text-decoration: line-through;
+  font-family: 'Corki';
+}
+
+.goods-recommend-layout .goods-line {
+  width: 100%;
+  height: 2rpx;
+  margin: 25rpx 0;
+  background: linear-gradient(to left, #efefef, #777, #efefef);
+}
+
+.partake-popup-layout {
+  width: 100vw;
+  max-height: 80vh;
+  overflow-y: scroll;
+  background-color: white;
+  font-size: 30rpx;
+}
+
+.partake-popup-layout .title {
+  padding: 30rpx 40rpx;
+}
+
+.partake-popup-layout .mark-time {
+  padding: 20rpx 40rpx;
+  font-size: 28rpx;
+}
+
+.partake-popup-layout .bottom {
+  height: 120rpx;
+}
+
+.partake-popup-layout .count-layout {
+  display: flex;
+  font-size: 28rpx;
+  padding: 15rpx 40rpx;
+  align-items: center;
+  align-content: center;
+}
+
+.partake-popup-layout .count-layout .left-view {
+  width: 230rpx;
+}
+
+.partake-popup-layout .count-layout .middle-view {
+  flex: 1;
+}
+
+.partake-popup-layout .count-layout .right-view {
+  text-align: right;
+  flex: 1;
+}
+
+.partake-popup-layout .userinfo-layout {
+  display: flex;
+  font-size: 28rpx;
+  padding: 20rpx 40rpx;
+  align-items: center;
+  align-content: center;
+}
+
+.partake-popup-layout .userinfo-layout .left-view {
+  width: 230rpx;
+}
+
+.partake-popup-layout .userinfo-layout .right-view {
+  flex: 1;
+  color: #8d8e8f;
+  font-size: 30rpx;
+}
+
+.partake-popup-layout .money-layout {
+  display: flex;
+  font-size: 28rpx;
+  padding: 30rpx 40rpx;
+  align-items: center;
+  align-content: center;
+}
+
+.partake-popup-layout .money-layout .left-view {
+  width: 230rpx;
+}
+
+.partake-popup-layout .money-layout .right-view {
+  text-align: right;
+  flex: 1;
+  position: relative;
+}
+
+.partake-popup-layout .money-layout .right-view .price-mark1 {
+  vertical-align: top;
+  font-size: 20rpx;
+  position: absolute;
+  top: 10rpx;
+}
+
+.partake-popup-layout .money-layout .right-view .price {
+  font-size: 60rpx;
+  font-weight: bold;
+  margin-left: 25rpx;
+  color: #1aa89b;
+  font-family: 'Corki';
+}
+
+.partake-popup-layout .money-layout .right-view .price-mark2 {
+  vertical-align: bottom;
+  font-size: 20rpx;
+}
+
+.signup-popup-layout {
+  width: 80vw;
+}
+
+.signup-popup-layout .btn-close {
+  width: 50rpx;
+  height: 50rpx;
+  float: right;
+}
+
+.signup-popup-layout .close-line {
+  float: right;
+  margin-right: 25rpx;
+  width: 2rpx;
+  height: 40rpx;
+  background-color: white;
+}
+
+.signup-popup-layout .content {
+  widows: 100%;
+  background-color: white;
+  border-radius: 7rpx;
+  box-sizing: border-box;
+}
+
+.signup-popup-layout .content .signup-bg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.signup-popup-layout .content .text-layout {
+  padding: 40rpx 60rpx;
+}
+
+.signup-popup-layout .content .text-layout .text-info {
+  text-align: center;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.signup-popup-layout .btn-confirm {
+  border: 1rpx solid #1bb3a6;
+  background-color: #1bb3a6;
+  text-align: center;
+  line-height: 85rpx;
+  border-radius: 10rpx;
+  font-size: 34rpx;
+  color: white;
+  height: auto;
+  margin: 0 60rpx 30rpx 60rpx;
+}
+
+.signup-popup-layout .mark-tree {
+  width: 62rpx;
+  height: 51rpx;
+  margin-left: 30rpx;
+  display: block;
+}
+
+.details-img-layout .details-image {
+  width: 100vw;
+  height: 500rpx;
+  display: block;
+  animation: fadeIn 1s both;
+}

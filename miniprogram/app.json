@@ -15,7 +15,8 @@
       "root": "product",
       "name": "产品",
       "pages": [
-        "pages/fh_list/index"
+        "pages/fh_list/index",
+        "pages/goodsInfo/index"
       ]
     },
     {

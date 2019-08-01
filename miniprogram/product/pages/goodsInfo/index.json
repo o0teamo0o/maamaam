@@ -1,0 +1,17 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "disableScroll": true,
+  "usingComponents": {
+    "refresher": "../../../components/refresher/index",
+    "rate": "../../../components/rate/index",
+    "van-button": "../../../components/button/index",
+    "popup": "../../../components/popup/index",
+    "calendar": "../../../components/calendar/index",
+    "tab": "../../../components/tab/index",
+    "tabs": "../../../components/tabs/index",
+    "input-number": "../../../components/input-number/index",
+    "tag": "../../../components/tag/index",
+    "dialog": "../../../components/dialog/index",
+    "toast": "../../../components/notify/index"
+  }
+}
