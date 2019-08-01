@@ -106,7 +106,7 @@
   <view class='line' />
 
   <view class='line margin-top-30' />
-  <tabs active="{{ currentTabIndex }}" bind:disabled="onClickDisabled" color="#ff8745">
+  <tabs active="{{ currentTabIndex }}" bind:change="onTabClickListener" color="#ff8745">
     <tab title="活动">
       <view class='goods-recommend-layout'>
         <view class="loading-layout" wx:if="{{!tourProductList}}" style="height:300px">
@@ -114,6 +114,12 @@
             <view class="sk-child sk-bounce1" />
             <view class="sk-child sk-bounce2" />
             <view class="sk-child sk-bounce3" />
+          </view>
+        </view>
+        <view wx:elif="{{isTourProductNetError}}" class='error-layout' style='height:300px' catchtap='onLoadRecommendData'>
+          <view class='error-view'>
+            <image src='../../images/icon_net_error.png' />
+            <view>网络异常,请轻点重试!</view>
           </view>
         </view>
         <view wx:elif="{{tourProductList.length == 0}}" class='empty-integral-layout' style="height:300px; line-height:300px">
@@ -173,6 +179,12 @@
             <view class="sk-child sk-bounce3" />
           </view>
         </view>
+        <view wx:elif="{{isGoodsProductNetError}}" class='error-layout' style='height:300px' catchtap='onLoadRecommendData'>
+          <view class='error-view'>
+            <image src='../../images/icon_net_error.png' />
+            <view>网络异常,请轻点重试!</view>
+          </view>
+        </view>
         <view wx:elif="{{goodsProductList.length == 0}}" class='empty-integral-layout' style="height:300px; line-height:300px">
           <view class='empty'>
             <image class='empty-icon' src='../../images/icon_empty_goods.png' mode='widthFix' />
@@ -228,6 +240,12 @@
             <view class="sk-child sk-bounce1" />
             <view class="sk-child sk-bounce2" />
             <view class="sk-child sk-bounce3" />
+          </view>
+        </view>
+        <view wx:elif="{{isIntegralExchangeNetError}}" class='error-layout' style='height:300px' catchtap='teamo'>
+          <view class='error-view'>
+            <image src='../../images/icon_net_error.png' />
+            <view>网络异常,请轻点重试!</view>
           </view>
         </view>
         <view wx:elif="{{integralExchangeList.length == 0}}" class='empty-integral-layout' style="height:300px; line-height:300px">
